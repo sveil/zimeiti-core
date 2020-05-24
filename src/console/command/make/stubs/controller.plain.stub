@@ -1,0 +1,10 @@
+<?php
+
+namespace {%namespace%};
+
+use sveil\Controller;
+
+class {%className%} extends Controller
+{
+    //
+}
