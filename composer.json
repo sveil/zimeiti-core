@@ -33,7 +33,9 @@
     "psr-4": {
       "sveil\\": "src/sveil/"
     },
-    "files": []
+    "files": [
+      "src/base.php"
+    ]
   },
   "repositories": {
     "packagist": {
