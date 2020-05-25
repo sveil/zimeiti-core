@@ -100,8 +100,7 @@ class Loader
 
         // 注册命名空间定义
         self::addNamespace([
-            'sveil'  => __DIR__,
-            'traits' => dirname(__DIR__) . DIRECTORY_SEPARATOR . 'traits',
+            'sveil' => __DIR__,
         ]);
 
         // 加载类库映射文件
