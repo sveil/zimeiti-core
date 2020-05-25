@@ -192,7 +192,7 @@ class Ask
     protected function getHiddenResponse($inputStream)
     {
         if ('\\' === DIRECTORY_SEPARATOR) {
-            $exe   = __DIR__ . '/../bin/hiddeninput.exe';
+            $exe   = dirname(dirname(dirname(dirname(__DIR__)))) . '/bin/hiddeninput.exe';
             $value = rtrim(shell_exec($exe));
             $this->output->writeln('');
 
