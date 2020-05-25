@@ -31,7 +31,7 @@
   },
   "autoload": {
     "psr-4": {
-      "sveil\\": "src/"
+      "sveil\\": "src/sveil/"
     },
     "files": [
       "src/helper.php"

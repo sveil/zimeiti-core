@@ -262,14 +262,10 @@ class Ask
         switch (true) {
             case null === $default:
                 $text = sprintf(' <info>%s</info>:', $text);
-
                 break;
-
             case $this->question instanceof Confirmation:
                 $text = sprintf(' <info>%s (yes/no)</info> [<comment>%s</comment>]:', $text, $default ? 'yes' : 'no');
-
                 break;
-
             case $this->question instanceof Choice && $this->question->isMultiselect():
                 $choices = $this->question->getChoices();
                 $default = explode(',', $default);
@@ -279,15 +275,11 @@ class Ask
                 }
 
                 $text = sprintf(' <info>%s</info> [<comment>%s</comment>]:', $text, implode(', ', $default));
-
                 break;
-
             case $this->question instanceof Choice:
                 $choices = $this->question->getChoices();
                 $text    = sprintf(' <info>%s</info> [<comment>%s</comment>]:', $text, $choices[$default]);
-
                 break;
-
             default:
                 $text = sprintf(' <info>%s</info> [<comment>%s</comment>]:', $text, $default);
         }

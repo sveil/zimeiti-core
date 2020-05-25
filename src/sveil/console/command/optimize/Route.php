@@ -55,6 +55,7 @@ class Route extends Command
                 $filename = $path . DIRECTORY_SEPARATOR . $file;
                 // 导入路由配置
                 $rules = include $filename;
+
                 if (is_array($rules)) {
                     Container::get('route')->import($rules);
                 }

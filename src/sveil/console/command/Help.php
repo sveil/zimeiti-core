@@ -33,7 +33,6 @@ class Help extends Command
     protected function configure()
     {
         $this->ignoreValidationErrors();
-
         $this->setName('help')->setDefinition([
             new InputArgument('command_name', InputArgument::OPTIONAL, 'The command name', 'help'),
             new InputOption('raw', null, InputOption::VALUE_NONE, 'To output raw command help'),
@@ -68,7 +67,6 @@ EOF
         $output->describe($this->command, [
             'raw_text' => $input->getOption('raw'),
         ]);
-
         $this->command = null;
     }
 }

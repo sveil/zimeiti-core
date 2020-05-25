@@ -77,7 +77,6 @@ class RouteList extends Command
 
         if (Container::get('config')->get('route_annotation')) {
             $suffix = Container::get('config')->get('controller_suffix') || Container::get('config')->get('class_suffix');
-
             include Container::get('build')->buildRoute($suffix);
         }
 

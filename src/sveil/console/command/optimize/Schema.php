@@ -52,11 +52,13 @@ class Schema extends Command
                 if (0 === strpos($file, '.')) {
                     continue;
                 }
+
                 $class = '\\' . $namespace . '\\' . $module . '\\model\\' . pathinfo($file, PATHINFO_FILENAME);
                 $this->buildModelSchema($class);
             }
 
             $output->writeln('<info>Succeed!</info>');
+
             return;
         } elseif ($input->hasOption('table')) {
             $table = $input->getOption('table');
@@ -78,6 +80,7 @@ class Schema extends Command
                 if (0 === strpos($file, '.')) {
                     continue;
                 }
+
                 $class = '\\' . $namespace . '\\model\\' . pathinfo($file, PATHINFO_FILENAME);
                 $this->buildModelSchema($class);
             }
@@ -104,7 +107,6 @@ class Schema extends Command
             $content = '<?php ' . PHP_EOL . 'return ';
             $info    = $class::getConnection()->getFields($table);
             $content .= var_export($info, true) . ';';
-
             file_put_contents(App::getRuntimePath() . 'schema' . DIRECTORY_SEPARATOR . $dbName . '.' . $table . '.php', $content);
         }
     }

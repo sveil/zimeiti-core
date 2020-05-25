@@ -65,6 +65,7 @@ class File extends Driver
                 return true;
             }
         } catch (\Exception $e) {
+            //
         }
 
         return false;
@@ -124,7 +125,6 @@ class File extends Driver
     public function get($name, $default = false)
     {
         $this->readTimes++;
-
         $filename = $this->getCacheKey($name);
 
         if (!is_file($filename)) {
@@ -136,6 +136,7 @@ class File extends Driver
 
         if (false !== $content) {
             $expire = (int) substr($content, 8, 12);
+
             if (0 != $expire && time() > filemtime($filename) + $expire) {
                 //缓存过期删除缓存文件
                 $this->unlink($filename);
@@ -149,6 +150,7 @@ class File extends Driver
                 //启用数据压缩
                 $content = gzuncompress($content);
             }
+
             return $this->unserialize($content);
         } else {
             return $default;
@@ -264,25 +266,29 @@ class File extends Driver
         if ($tag) {
             // 指定标签清除
             $keys = $this->getTagItem($tag);
+
             foreach ($keys as $key) {
                 $this->unlink($key);
             }
+
             $this->rm($this->getTagKey($tag));
+
             return true;
         }
 
         $this->writeTimes++;
-
         $files = (array) glob($this->options['path'] . ($this->options['prefix'] ? $this->options['prefix'] . DIRECTORY_SEPARATOR : '') . '*');
 
         foreach ($files as $path) {
             if (is_dir($path)) {
                 $matches = glob($path . DIRECTORY_SEPARATOR . '*.php');
+
                 if (is_array($matches)) {
                     array_map(function ($v) {
                         $this->unlink($v);
                     }, $matches);
                 }
+
                 rmdir($path);
             } else {
                 $this->unlink($path);

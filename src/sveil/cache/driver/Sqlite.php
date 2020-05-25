@@ -213,6 +213,7 @@ class Sqlite extends Driver
             $name = sqlite_escape_string($this->getTagKey($tag));
             $sql  = 'DELETE FROM ' . $this->options['table'] . ' WHERE tag=\'' . $name . '\'';
             sqlite_query($this->handler, $sql);
+
             return true;
         }
 

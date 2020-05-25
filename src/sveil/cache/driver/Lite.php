@@ -42,7 +42,6 @@ class Lite extends Driver
         if (substr($this->options['path'], -1) != DIRECTORY_SEPARATOR) {
             $this->options['path'] .= DIRECTORY_SEPARATOR;
         }
-
     }
 
     /**

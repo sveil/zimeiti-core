@@ -54,6 +54,7 @@ class Wincache extends Driver
     {
         $this->readTimes++;
         $key = $this->getCacheKey($name);
+
         return wincache_ucache_exists($key);
     }
 

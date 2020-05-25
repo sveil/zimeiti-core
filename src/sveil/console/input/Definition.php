@@ -365,6 +365,7 @@ class Definition
 
         foreach ($this->getArguments() as $argument) {
             $element = '<' . $argument->getName() . '>';
+
             if (!$argument->isRequired()) {
                 $element = '[' . $element . ']';
             } elseif ($argument->isArray()) {

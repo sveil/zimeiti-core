@@ -205,6 +205,7 @@ class Redis extends Driver
             $this->handler->del($keys);
             $tagName = $this->getTagKey($tag);
             $this->handler->del($tagName);
+
             return true;
         }
 
