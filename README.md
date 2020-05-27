@@ -1,6 +1,6 @@
 # [The php framework of Zimeiti Contest Management System for Sveil](https://sveil.com)
 
-Zimeiti CMS was created by, and is maintained by [Sveil.com](https://sveil.com), and is a PHP CMS powered by [Thinkphp 5.1](https://github.com/top-think/thinkphp). Feel free to check out the [releases](https://github.com/sveil/zimeiti-cms/releases), [license](LICENSE), [screenshots](SCREENSHOTS.md), and [contribution guidelines](CONTRIBUTING.md).
+Zimeiti CMS was created by, and is maintained by [Sveil.com](https://sveil.com), and is a PHP CMS powered by [Zimeiti-Core](https://github.com/sveil/zimeiti-core). Feel free to check out the [releases](https://github.com/sveil/zimeiti-cms/releases), [license](LICENSE), [screenshots](SCREENSHOTS.md), and [contribution guidelines](CONTRIBUTING.md).
 
 ## Installation
 
@@ -30,7 +30,7 @@ Zimeiti CMS was created by, and is maintained by [Sveil.com](https://sveil.com),
 
 GNU AFFERO GENERAL PUBLIC LICENSE
 
-Zimeiti CMS Is A PHP CMS Powered By Thinkphp 5.1
+Zimeiti CMS Is A PHP CMS Powered By Zimeiti-Core
 
 Copyright (C) 2019-2020 Richard
 

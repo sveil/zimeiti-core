@@ -340,10 +340,8 @@ class App extends Container
         $this->session->setConfig($config['session']);
         $this->debug->setConfig($config['trace']);
         $this->cache->init($config['cache'], true);
-
         // 加载当前模块语言包
         $this->lang->load($this->appPath . $module . DIRECTORY_SEPARATOR . 'lang' . DIRECTORY_SEPARATOR . $this->request->langset() . '.php');
-
         // 模块请求缓存检查
         $this->checkRequestCache(
             $config['app']['request_cache'],
@@ -380,7 +378,6 @@ class App extends Container
 
             // 监听app_dispatch
             $this->hook->listen('app_dispatch');
-
             $dispatch = $this->dispatch;
 
             if (empty($dispatch)) {
@@ -400,14 +397,12 @@ class App extends Container
 
             // 监听app_begin
             $this->hook->listen('app_begin');
-
             // 请求缓存检查
             $this->checkRequestCache(
                 $this->config('request_cache'),
                 $this->config('request_cache_expire'),
                 $this->config('request_cache_except')
             );
-
             $data = null;
         } catch (HttpResponseException $exception) {
             $dispatch = null;
@@ -419,7 +414,6 @@ class App extends Container
         });
 
         $response = $this->middleware->dispatch($this->request);
-
         // 监听app_end
         $this->hook->listen('app_end', $response);
 
@@ -449,7 +443,6 @@ class App extends Container
         }
 
         $this->request->setLangset($this->lang->range());
-
         // 加载系统语言包
         $this->lang->load([
             $this->corePath . 'lang' . DIRECTORY_SEPARATOR . $this->request->langset() . '.php',
@@ -500,6 +493,7 @@ class App extends Container
     public function dispatch(Dispatch $dispatch)
     {
         $this->dispatch = $dispatch;
+
         return $this;
     }
 
@@ -535,6 +529,7 @@ class App extends Container
     {
         // 路由检测
         $files = scandir($this->routePath);
+
         foreach ($files as $file) {
             if (strpos($file, '.php')) {
                 $filename = $this->routePath . $file;
@@ -582,10 +577,8 @@ class App extends Container
 
         // 获取应用调度信息
         $path = $this->request->path();
-
         // 是否强制路由模式
         $must = !is_null($this->routeMust) ? $this->routeMust : $this->route->config('url_route_must');
-
         // 路由检测 返回一个Dispatch对象
         $dispatch = $this->route->check($path, $must);
 
@@ -613,6 +606,7 @@ class App extends Container
     public function routeMust($must = false)
     {
         $this->routeMust = $must;
+
         return $this;
     }
 
@@ -931,6 +925,7 @@ class App extends Container
     public function setNamespace($namespace)
     {
         $this->namespace = $namespace;
+
         return $this;
     }
 
@@ -963,5 +958,4 @@ class App extends Container
     {
         return $this->beginMem;
     }
-
 }
