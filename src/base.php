@@ -13,7 +13,7 @@
 namespace sveil;
 
 // 载入Loader类
-require __DIR__ . 'sveil/Loader.php';
+require __DIR__ . '/sveil/Loader.php';
 
 // 注册自动加载
 Loader::register();
