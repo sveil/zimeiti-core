@@ -1,6 +1,6 @@
 {
-  "name": "sveil/zimeiti-core",
-  "description": "The php core framework of Zimeiti Contest Management System for Sveil",
+  "name": "sveil/zimeiti-frame",
+  "description": "the php framework of Zimeiti Contest Management System for Sveil",
   "type": "framework",
   "keywords": [
     "sveil",
@@ -30,10 +30,10 @@
     "phpdocumentor/reflection-docblock": "^2.0"
   },
   "autoload": {
+    "files": [],
     "psr-4": {
-      "sveil\\": "src/sveil/"
-    },
-    "files": []
+      "sveil\\think\\": "library/think/"
+    }
   },
   "repositories": {
     "packagist": {
