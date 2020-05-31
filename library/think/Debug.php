@@ -251,7 +251,7 @@ class Debug
 
         unset($config['type']);
 
-        $trace = Loader::factory($type, '\\think\\debug\\', $config);
+        $trace = Loader::factory($type, '\\sveil\\think\\debug\\', $config);
 
         if ($response instanceof Redirect) {
             //TODO 记录

@@ -40,8 +40,7 @@ EOF;
         $app              = Container::get('app');
         $namespacesToScan = [
             $app->getNamespace() . '\\' => realpath(rtrim($app->getAppPath())),
-            'think\\'                   => $app->getThinkPath() . 'library/think',
-            'traits\\'                  => $app->getThinkPath() . 'library/traits',
+            'sveil\\think\\'            => $app->getThinkPath() . 'library/think',
             ''                          => realpath(rtrim($app->getRootPath() . 'extend')),
         ];
 

@@ -1786,7 +1786,7 @@ class Query
         }
 
         /** @var Paginator $class */
-        $class = false !== strpos($config['type'], '\\') ? $config['type'] : '\\think\\paginator\\driver\\' . ucwords($config['type']);
+        $class = false !== strpos($config['type'], '\\') ? $config['type'] : '\\sveil\\think\\paginator\\driver\\' . ucwords($config['type']);
         $page  = isset($config['page']) ? (int) $config['page'] : call_user_func([
             $class,
             'getCurrentPage',

@@ -102,7 +102,7 @@ class Template
         // 初始化模板编译存储器
         $type = $this->config['compile_type'] ? $this->config['compile_type'] : 'File';
 
-        $this->storage = Loader::factory($type, '\\think\\template\\driver\\', null);
+        $this->storage = Loader::factory($type, '\\sveil\\think\\template\\driver\\', null);
     }
 
     public static function __make(Config $config)
@@ -769,7 +769,7 @@ class Template
             $className = $tagLib;
             $tagLib    = substr($tagLib, strrpos($tagLib, '\\') + 1);
         } else {
-            $className = '\\think\\template\\taglib\\' . ucwords($tagLib);
+            $className = '\\sveil\\think\\template\\taglib\\' . ucwords($tagLib);
         }
 
         $tLib = new $className($this);

@@ -22,7 +22,7 @@ use sveil\think\db\Query;
 class Mysql extends Connection
 {
 
-    protected $builder = '\\think\\db\\builder\\Mysql';
+    protected $builder = '\\sveil\\think\\db\\builder\\Mysql';
 
     /**
      * 初始化

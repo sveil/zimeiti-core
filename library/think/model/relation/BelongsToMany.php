@@ -106,7 +106,7 @@ class BelongsToMany extends Relation
      */
     protected function newPivot($data = [], $isUpdate = false)
     {
-        $class = $this->pivotName ?: '\\think\\model\\Pivot';
+        $class = $this->pivotName ?: '\\sveil\\think\\model\\Pivot';
         $pivot = new $class($data, $this->parent, $this->middle);
 
         if ($pivot instanceof Pivot) {

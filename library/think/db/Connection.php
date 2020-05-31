@@ -108,7 +108,7 @@ abstract class Connection
         // Builder类
         'builder'         => '',
         // Query类
-        'query'           => '\\think\\db\\Query',
+        'query'           => '\\sveil\\think\\db\\Query',
         // 是否需要断线重连
         'break_reconnect' => false,
         // 断线标识字符串
@@ -196,7 +196,7 @@ abstract class Connection
                 $name = md5(serialize($config));
             }
 
-            self::$instance[$name] = Loader::factory($config['type'], '\\think\\db\\connector\\', $config);
+            self::$instance[$name] = Loader::factory($config['type'], '\\sveil\\think\\db\\connector\\', $config);
         }
 
         return self::$instance[$name];
@@ -213,7 +213,7 @@ abstract class Connection
             return $this->builderClassName;
         }
 
-        return $this->getConfig('builder') ?: '\\think\\db\\builder\\' . ucfirst($this->getConfig('type'));
+        return $this->getConfig('builder') ?: '\\sveil\\think\\db\\builder\\' . ucfirst($this->getConfig('type'));
     }
 
     /**

@@ -133,7 +133,7 @@ class Error
             // 异常处理handle
             $class = self::$exceptionHandler;
 
-            if ($class && is_string($class) && class_exists($class) && is_subclass_of($class, "\\think\\exception\\Handle")) {
+            if ($class && is_string($class) && class_exists($class) && is_subclass_of($class, "\\sveil\\think\\exception\\Handle")) {
                 $handle = new $class;
             } else {
                 $handle = new Handle;

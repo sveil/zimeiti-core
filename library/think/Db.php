@@ -94,7 +94,7 @@ class Db
         self::$config = $config;
 
         if (empty($config['query'])) {
-            self::$config['query'] = '\\think\\db\\Query';
+            self::$config['query'] = '\\sveil\\think\\db\\Query';
         }
     }
 

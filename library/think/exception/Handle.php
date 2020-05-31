@@ -21,7 +21,7 @@ class Handle
 {
     protected $render;
     protected $ignoreReport = [
-        '\\think\\exception\\HttpException',
+        '\\sveil\\think\\exception\\HttpException',
     ];
 
     public function setRender($render)

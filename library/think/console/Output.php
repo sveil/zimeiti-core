@@ -67,7 +67,7 @@ class Output
 
     public function __construct($driver = 'console')
     {
-        $class = '\\think\\console\\output\\driver\\' . ucwords($driver);
+        $class = '\\sveil\\think\\console\\output\\driver\\' . ucwords($driver);
 
         $this->handle = new $class($this);
     }
