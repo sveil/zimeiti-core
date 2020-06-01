@@ -71,9 +71,9 @@ if (!function_exists('app')) {
      * @param string    $name 类名或标识 默认获取当前应用实例
      * @param array     $args 参数
      * @param bool      $newInstance    是否每次创建新的实例
-     * @return mixed|\think\App
+     * @return mixed|\sveil\App
      */
-    function app($name = 'think\App', $args = [], $newInstance = false)
+    function app($name = 'sveil\App', $args = [], $newInstance = false)
     {
         return Container::get($name, $args, $newInstance);
     }
@@ -236,7 +236,7 @@ if (!function_exists('controller')) {
      * @param string    $name 资源地址
      * @param string    $layer 控制层名称
      * @param bool      $appendSuffix 是否添加类名后缀
-     * @return \think\Controller
+     * @return \sveil\Controller
      */
     function controller($name, $layer = 'controller', $appendSuffix = false)
     {
@@ -279,7 +279,7 @@ if (!function_exists('db')) {
      * @param string        $name 操作的数据表名称（不含前缀）
      * @param array|string  $config 数据库配置参数
      * @param bool          $force 是否强制重新连接
-     * @return \think\db\Query
+     * @return \sveil\db\Query
      */
     function db($name = '', $config = [], $force = true)
     {
@@ -307,12 +307,12 @@ if (!function_exists('debug')) {
 
 if (!function_exists('download')) {
     /**
-     * 获取\think\response\Download对象实例
+     * 获取\sveil\response\Download对象实例
      * @param string  $filename 要下载的文件
      * @param string  $name 显示文件名
      * @param bool    $content 是否为内容
      * @param integer $expire 有效期（秒）
-     * @return \think\response\Download
+     * @return \sveil\response\Download
      */
     function download($filename, $name = '', $content = false, $expire = 360, $openinBrowser = false)
     {
@@ -360,7 +360,7 @@ if (!function_exists('exception')) {
      */
     function exception($msg, $code = 0, $exception = '')
     {
-        $e = $exception ?: '\think\Exception';
+        $e = $exception ?: '\sveil\Exception';
         throw new $e($msg, $code);
     }
 }
@@ -416,12 +416,12 @@ if (!function_exists('input')) {
 
 if (!function_exists('json')) {
     /**
-     * 获取\think\response\Json对象实例
+     * 获取\sveil\response\Json对象实例
      * @param mixed   $data 返回的数据
      * @param integer $code 状态码
      * @param array   $header 头部
      * @param array   $options 参数
-     * @return \think\response\Json
+     * @return \sveil\response\Json
      */
     function json($data = [], $code = 200, $header = [], $options = [])
     {
@@ -431,12 +431,12 @@ if (!function_exists('json')) {
 
 if (!function_exists('jsonp')) {
     /**
-     * 获取\think\response\Jsonp对象实例
+     * 获取\sveil\response\Jsonp对象实例
      * @param mixed   $data    返回的数据
      * @param integer $code    状态码
      * @param array   $header 头部
      * @param array   $options 参数
-     * @return \think\response\Jsonp
+     * @return \sveil\response\Jsonp
      */
     function jsonp($data = [], $code = 200, $header = [], $options = [])
     {
@@ -464,7 +464,7 @@ if (!function_exists('model')) {
      * @param string    $name Model名称
      * @param string    $layer 业务层名称
      * @param bool      $appendSuffix 是否添加类名后缀
-     * @return \think\Model
+     * @return \sveil\Model
      */
     function model($name = '', $layer = 'model', $appendSuffix = false)
     {
@@ -497,11 +497,11 @@ if (!function_exists('parse_name')) {
 
 if (!function_exists('redirect')) {
     /**
-     * 获取\think\response\Redirect对象实例
+     * 获取\sveil\response\Redirect对象实例
      * @param mixed         $url 重定向地址 支持Url::build方法的地址
      * @param array|integer $params 额外参数
      * @param integer       $code 状态码
-     * @return \think\response\Redirect
+     * @return \sveil\response\Redirect
      */
     function redirect($url = [], $params = [], $code = 302)
     {
@@ -655,7 +655,7 @@ if (!function_exists('validate')) {
      * @param string    $name 验证器名称
      * @param string    $layer 业务层名称
      * @param bool      $appendSuffix 是否添加类名后缀
-     * @return \think\Validate
+     * @return \sveil\Validate
      */
     function validate($name = '', $layer = 'validate', $appendSuffix = false)
     {
@@ -670,7 +670,7 @@ if (!function_exists('view')) {
      * @param array     $vars 模板变量
      * @param integer   $code 状态码
      * @param callable  $filter 内容过滤
-     * @return \think\response\View
+     * @return \sveil\response\View
      */
     function view($template = '', $vars = [], $code = 200, $filter = null)
     {
@@ -699,12 +699,12 @@ if (!function_exists('widget')) {
 
 if (!function_exists('xml')) {
     /**
-     * 获取\think\response\Xml对象实例
+     * 获取\sveil\response\Xml对象实例
      * @param mixed   $data    返回的数据
      * @param integer $code    状态码
      * @param array   $header  头部
      * @param array   $options 参数
-     * @return \think\response\Xml
+     * @return \sveil\response\Xml
      */
     function xml($data = [], $code = 200, $header = [], $options = [])
     {

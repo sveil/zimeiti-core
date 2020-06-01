@@ -32,7 +32,7 @@
   "autoload": {
     "files": [],
     "psr-4": {
-      "sveil\\": "library/think/"
+      "sveil\\": "src/sveil/"
     }
   },
   "repositories": {
