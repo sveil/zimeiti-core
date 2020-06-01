@@ -1,12 +1,12 @@
 {
-  "name": "sveil/zimeiti-frame",
-  "description": "the php framework of Zimeiti Contest Management System for Sveil",
+  "name": "sveil/zimeiti-core",
+  "description": "the php framework core of Zimeiti Contest Management System for Sveil",
   "type": "framework",
   "keywords": [
     "sveil",
     "zimeiti",
     "framework",
-    "ORM"
+    "core"
   ],
   "homepage": "http://sveil.com",
   "license": "AGPL-3.0",
@@ -32,7 +32,7 @@
   "autoload": {
     "files": [],
     "psr-4": {
-      "sveil\\": "src/sveil/"
+      "sveil\\": "src/"
     }
   },
   "repositories": {

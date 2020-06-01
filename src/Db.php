@@ -16,7 +16,7 @@ use sveil\db\Connection;
 
 /**
  * Class Db
- * @package think
+ * @package sveil
  * @method \sveil\db\Query master() static 从主服务器读取数据
  * @method \sveil\db\Query readMaster(bool $all = false) static 后续从主服务器读取数据
  * @method \sveil\db\Query table(string $table) static 指定数据表（含前缀）

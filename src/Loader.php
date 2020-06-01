@@ -66,7 +66,7 @@ class Loader
 
         $path = realpath(dirname($scriptName));
 
-        if (!is_file($path . DIRECTORY_SEPARATOR . 'think')) {
+        if (!is_file($path . DIRECTORY_SEPARATOR . 'sveil')) {
             $path = dirname($path);
         }
 

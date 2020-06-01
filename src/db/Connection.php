@@ -2137,7 +2137,7 @@ abstract class Connection
             $data = $value[2];
         }
 
-        $prefix = 'think:' . $this->getConfig('database') . '.';
+        $prefix = 'sveil:' . $this->getConfig('database') . '.';
 
         if (isset($data)) {
             return $prefix . $query->getTable() . '|' . $data;

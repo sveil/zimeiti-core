@@ -25,7 +25,7 @@ use ReflectionMethod;
 use sveil\exception\ClassNotFoundException;
 
 /**
- * @package think
+ * @package sveil
  * @property Build          $build
  * @property Cache          $cache
  * @property Config         $config

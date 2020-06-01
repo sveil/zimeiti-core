@@ -97,7 +97,7 @@ return [
         'http_agent_ip'          => 'HTTP_X_REAL_IP',
         // URL伪静态后缀
         'url_html_suffix'        => 'html',
-        // 域名根，如thinkphp.cn
+        // 域名根，如sveil.com
         'url_domain_root'        => '',
         // 表单请求类型伪装变量
         'var_method'             => '_method',

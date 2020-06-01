@@ -36,7 +36,7 @@ class Lang
      * 多语言cookie变量
      * @var string
      */
-    protected $langCookieVar = 'think_var';
+    protected $langCookieVar = 'sveil_var';
 
     /**
      * 允许的多语言列表

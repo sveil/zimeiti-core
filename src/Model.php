@@ -17,7 +17,7 @@ use sveil\db\Query;
 
 /**
  * Class Model
- * @package think
+ * @package sveil
  * @mixin Query
  * @method Query where(mixed $field, string $op = null, mixed $condition = null) static 查询条件
  * @method Query whereRaw(string $where, array $bind = []) static 表达式查询

@@ -606,9 +606,9 @@ if (!function_exists('trace')) {
      * @param string    $level 日志级别
      * @return array|void
      */
-    function trace($log = '[think]', $level = 'log')
+    function trace($log = '[sveil]', $level = 'log')
     {
-        if ('[think]' === $log) {
+        if ('[sveil]' === $log) {
             return Log::getLog();
         } else {
             Log::record($log, $level);

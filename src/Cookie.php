@@ -108,7 +108,7 @@ class Cookie
         // 设置cookie
         if (is_array($value)) {
             array_walk_recursive($value, [$this, 'jsonFormatProtect'], 'encode');
-            $value = 'think:' . json_encode($value);
+            $value = 'sveil:' . json_encode($value);
         }
 
         $expire = !empty($config['expire']) ? $_SERVER['REQUEST_TIME'] + intval($config['expire']) : 0;
@@ -194,7 +194,7 @@ class Cookie
         } elseif (isset($_COOKIE[$key])) {
             $value = $_COOKIE[$key];
 
-            if (0 === strpos($value, 'think:')) {
+            if (0 === strpos($value, 'sveil:')) {
                 $value = substr($value, 6);
                 $value = json_decode($value, true);
                 array_walk_recursive($value, [$this, 'jsonFormatProtect'], 'decode');

@@ -34,7 +34,7 @@ class Request
         'pathinfo_fetch'   => ['ORIG_PATH_INFO', 'REDIRECT_PATH_INFO', 'REDIRECT_URL'],
         // 默认全局过滤方法 用逗号分隔多个
         'default_filter'   => '',
-        // 域名根，如thinkphp.cn
+        // 域名根，如sveil.com
         'url_domain_root'  => '',
         // HTTPS代理标识
         'https_agent_name' => '',
@@ -488,7 +488,7 @@ class Request
             $rootDomain = $this->config['url_domain_root'];
 
             if ($rootDomain) {
-                // 配置域名根 例如 thinkphp.cn 163.com.cn 如果是国家级域名 com.cn net.cn 之类的域名需要配置
+                // 配置域名根 例如 sveil.com 163.com.cn 如果是国家级域名 com.cn net.cn 之类的域名需要配置
                 $domain = explode('.', rtrim(stristr($this->host(true), $rootDomain, true), '.'));
             } else {
                 $domain = explode('.', $this->host(true), -2);

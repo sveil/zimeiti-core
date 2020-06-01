@@ -21,7 +21,7 @@ class Xml extends Response
     // 输出参数
     protected $options = [
         // 根节点名
-        'root_node' => 'think',
+        'root_node' => 'sveil',
         // 根节点属性
         'root_attr' => '',
         //数字索引的子节点名
