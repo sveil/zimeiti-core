@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\exception\ClassNotFoundException;
-use sveil\think\validate\ValidateRule;
+use sveil\exception\ClassNotFoundException;
+use sveil\validate\ValidateRule;
 
 class Validate
 {

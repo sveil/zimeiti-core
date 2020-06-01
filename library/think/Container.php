@@ -10,7 +10,7 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
 use ArrayAccess;
 use ArrayIterator;
@@ -22,7 +22,7 @@ use ReflectionClass;
 use ReflectionException;
 use ReflectionFunction;
 use ReflectionMethod;
-use sveil\think\exception\ClassNotFoundException;
+use sveil\exception\ClassNotFoundException;
 
 /**
  * @package think

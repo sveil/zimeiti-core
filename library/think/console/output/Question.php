@@ -10,7 +10,7 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\output;
+namespace sveil\console\output;
 
 class Question
 {

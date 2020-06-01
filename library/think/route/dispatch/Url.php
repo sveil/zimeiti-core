@@ -10,11 +10,11 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\route\dispatch;
+namespace sveil\route\dispatch;
 
-use sveil\think\exception\HttpException;
-use sveil\think\Loader;
-use sveil\think\route\Dispatch;
+use sveil\exception\HttpException;
+use sveil\Loader;
+use sveil\route\Dispatch;
 
 class Url extends Dispatch
 {

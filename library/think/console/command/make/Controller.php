@@ -10,11 +10,11 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\command\make;
+namespace sveil\console\command\make;
 
-use sveil\think\console\command\Make;
-use sveil\think\console\input\Option;
-use sveil\think\facade\Config;
+use sveil\console\command\Make;
+use sveil\console\input\Option;
+use sveil\facade\Config;
 
 class Controller extends Make
 {

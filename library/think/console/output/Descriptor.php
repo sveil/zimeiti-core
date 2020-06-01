@@ -10,15 +10,15 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\output;
+namespace sveil\console\output;
 
-use sveil\think\Console;
-use sveil\think\console\Command;
-use sveil\think\console\input\Argument as InputArgument;
-use sveil\think\console\input\Definition as InputDefinition;
-use sveil\think\console\input\Option as InputOption;
-use sveil\think\console\Output;
-use sveil\think\console\output\descriptor\Console as ConsoleDescription;
+use sveil\Console;
+use sveil\console\Command;
+use sveil\console\input\Argument as InputArgument;
+use sveil\console\input\Definition as InputDefinition;
+use sveil\console\input\Option as InputOption;
+use sveil\console\Output;
+use sveil\console\output\descriptor\Console as ConsoleDescription;
 
 class Descriptor
 {

@@ -10,15 +10,15 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\command;
+namespace sveil\console\command;
 
-use sveil\think\console\Command;
-use sveil\think\console\Input;
-use sveil\think\console\input\Argument;
-use sveil\think\console\input\Option;
-use sveil\think\console\Output;
-use sveil\think\console\Table;
-use sveil\think\Container;
+use sveil\console\Command;
+use sveil\console\Input;
+use sveil\console\input\Argument;
+use sveil\console\input\Option;
+use sveil\console\Output;
+use sveil\console\Table;
+use sveil\Container;
 
 class RouteList extends Command
 {

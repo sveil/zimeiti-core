@@ -10,14 +10,14 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\model\relation;
+namespace sveil\model\relation;
 
 use Closure;
-use sveil\think\db\Query;
-use sveil\think\Exception;
-use sveil\think\Loader;
-use sveil\think\Model;
-use sveil\think\model\Relation;
+use sveil\db\Query;
+use sveil\Exception;
+use sveil\Loader;
+use sveil\Model;
+use sveil\model\Relation;
 
 class MorphMany extends Relation
 {

@@ -10,7 +10,7 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\process\pipes;
+namespace sveil\process\pipes;
 
 abstract class Pipes
 {

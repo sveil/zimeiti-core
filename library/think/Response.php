@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\response\Redirect as RedirectResponse;
+use sveil\response\Redirect as RedirectResponse;
 
 class Response
 {
@@ -105,7 +105,7 @@ class Response
      */
     public static function create($data = '', $type = '', $code = 200, array $header = [], $options = [])
     {
-        $class = false !== strpos($type, '\\') ? $type : '\\sveil\\think\\response\\' . ucfirst(strtolower($type));
+        $class = false !== strpos($type, '\\') ? $type : '\\sveil\\response\\' . ucfirst(strtolower($type));
 
         if (class_exists($class)) {
             return new $class($data, $code, $header, $options);

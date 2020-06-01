@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\cache;
+namespace sveil\cache;
 
-use sveil\think\Container;
+use sveil\Container;
 
 /**
  * 缓存基础类

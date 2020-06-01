@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\log\driver;
+namespace sveil\log\driver;
 
-use sveil\think\App;
+use sveil\App;
 
 /**
  * 本地化调试输出到文件

@@ -10,11 +10,11 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\exception\ClassNotFoundException;
-use sveil\think\exception\HttpResponseException;
-use sveil\think\route\Dispatch;
+use sveil\exception\ClassNotFoundException;
+use sveil\exception\HttpResponseException;
+use sveil\route\Dispatch;
 
 /**
  * App 应用管理

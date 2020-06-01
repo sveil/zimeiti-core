@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\cache\driver;
+namespace sveil\cache\driver;
 
-use sveil\think\cache\Driver;
-use sveil\think\Container;
+use sveil\cache\Driver;
+use sveil\Container;
 
 /**
  * 文件类型缓存类

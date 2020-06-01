@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\process;
+namespace sveil\process;
 
-use sveil\think\Process;
+use sveil\Process;
 
 class Builder
 {

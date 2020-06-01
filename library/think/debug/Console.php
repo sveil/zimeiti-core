@@ -10,11 +10,11 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\debug;
+namespace sveil\debug;
 
-use sveil\think\Container;
-use sveil\think\Db;
-use sveil\think\Response;
+use sveil\Container;
+use sveil\Db;
+use sveil\Response;
 
 /**
  * 浏览器调试输出

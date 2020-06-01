@@ -10,7 +10,7 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\exception;
+namespace sveil\exception;
 
 class TemplateNotFoundException extends \RuntimeException
 {

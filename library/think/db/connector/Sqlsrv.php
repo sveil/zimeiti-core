@@ -10,11 +10,11 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\db\connector;
+namespace sveil\db\connector;
 
 use PDO;
-use sveil\think\db\Connection;
-use sveil\think\db\Query;
+use sveil\db\Connection;
+use sveil\db\Query;
 
 /**
  * Sqlsrv数据库驱动
@@ -29,7 +29,7 @@ class Sqlsrv extends Connection
         PDO::ATTR_STRINGIFY_FETCHES => false,
     ];
 
-    protected $builder = '\\sveil\\think\\db\\builder\\Sqlsrv';
+    protected $builder = '\\sveil\\db\\builder\\Sqlsrv';
 
     /**
      * 解析pdo连接的dsn信息

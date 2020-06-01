@@ -10,18 +10,18 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\exception;
+namespace sveil\exception;
 
 use Exception;
-use sveil\think\console\Output;
-use sveil\think\Container;
-use sveil\think\Response;
+use sveil\console\Output;
+use sveil\Container;
+use sveil\Response;
 
 class Handle
 {
     protected $render;
     protected $ignoreReport = [
-        '\\sveil\\think\\exception\\HttpException',
+        '\\sveil\\exception\\HttpException',
     ];
 
     public function setRender($render)

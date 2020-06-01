@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\exception\ClassNotFoundException;
+use sveil\exception\ClassNotFoundException;
 
 class Session
 {
@@ -189,7 +189,7 @@ class Session
 
         if (!empty($config['type'])) {
             // 读取session驱动
-            $class = false !== strpos($config['type'], '\\') ? $config['type'] : '\\sveil\\think\\session\\driver\\' . ucwords($config['type']);
+            $class = false !== strpos($config['type'], '\\') ? $config['type'] : '\\sveil\\session\\driver\\' . ucwords($config['type']);
 
             // 检查驱动类
             if (!class_exists($class) || !session_set_save_handler(new $class($config))) {
@@ -302,7 +302,7 @@ class Session
 
         if (!empty($config['type']) && isset($config['use_lock']) && $config['use_lock']) {
             // 读取session驱动
-            $class = false !== strpos($config['type'], '\\') ? $config['type'] : '\\sveil\\think\\session\\driver\\' . ucwords($config['type']);
+            $class = false !== strpos($config['type'], '\\') ? $config['type'] : '\\sveil\\session\\driver\\' . ucwords($config['type']);
 
             // 检查驱动类及类中是否存在 lock 和 unlock 函数
             if (class_exists($class) && method_exists($class, 'lock') && method_exists($class, 'unlock')) {

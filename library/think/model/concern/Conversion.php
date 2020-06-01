@@ -10,13 +10,13 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\model\concern;
+namespace sveil\model\concern;
 
-use sveil\think\Collection;
-use sveil\think\Exception;
-use sveil\think\Loader;
-use sveil\think\Model;
-use sveil\think\model\Collection as ModelCollection;
+use sveil\Collection;
+use sveil\Exception;
+use sveil\Loader;
+use sveil\Model;
+use sveil\model\Collection as ModelCollection;
 
 /**
  * 模型数据转换处理

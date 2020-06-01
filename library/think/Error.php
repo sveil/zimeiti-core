@@ -10,12 +10,12 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\console\Output as ConsoleOutput;
-use sveil\think\exception\ErrorException;
-use sveil\think\exception\Handle;
-use sveil\think\exception\ThrowableError;
+use sveil\console\Output as ConsoleOutput;
+use sveil\exception\ErrorException;
+use sveil\exception\Handle;
+use sveil\exception\ThrowableError;
 
 class Error
 {
@@ -133,7 +133,7 @@ class Error
             // 异常处理handle
             $class = self::$exceptionHandler;
 
-            if ($class && is_string($class) && class_exists($class) && is_subclass_of($class, "\\sveil\\think\\exception\\Handle")) {
+            if ($class && is_string($class) && class_exists($class) && is_subclass_of($class, "\\sveil\\exception\\Handle")) {
                 $handle = new $class;
             } else {
                 $handle = new Handle;

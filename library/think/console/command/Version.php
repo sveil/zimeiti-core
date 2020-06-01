@@ -10,12 +10,12 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\command;
+namespace sveil\console\command;
 
-use sveil\think\console\Command;
-use sveil\think\console\Input;
-use sveil\think\console\Output;
-use sveil\think\facade\App;
+use sveil\console\Command;
+use sveil\console\Input;
+use sveil\console\Output;
+use sveil\facade\App;
 
 class Version extends Command
 {

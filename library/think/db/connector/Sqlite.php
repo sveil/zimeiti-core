@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\db\connector;
+namespace sveil\db\connector;
 
 use PDO;
-use sveil\think\db\Connection;
+use sveil\db\Connection;
 
 /**
  * Sqlite数据库驱动
@@ -21,7 +21,7 @@ use sveil\think\db\Connection;
 class Sqlite extends Connection
 {
 
-    protected $builder = '\\sveil\\think\\db\\builder\\Sqlite';
+    protected $builder = '\\sveil\\db\\builder\\Sqlite';
 
     /**
      * 解析pdo连接的dsn信息

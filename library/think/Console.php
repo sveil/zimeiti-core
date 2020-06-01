@@ -10,16 +10,16 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\console\Command;
-use sveil\think\console\command\Help as HelpCommand;
-use sveil\think\console\Input;
-use sveil\think\console\input\Argument as InputArgument;
-use sveil\think\console\input\Definition as InputDefinition;
-use sveil\think\console\input\Option as InputOption;
-use sveil\think\console\Output;
-use sveil\think\console\output\driver\Buffer;
+use sveil\console\Command;
+use sveil\console\command\Help as HelpCommand;
+use sveil\console\Input;
+use sveil\console\input\Argument as InputArgument;
+use sveil\console\input\Definition as InputDefinition;
+use sveil\console\input\Option as InputOption;
+use sveil\console\Output;
+use sveil\console\output\driver\Buffer;
 
 class Console
 {
@@ -38,22 +38,22 @@ class Console
     private $defaultCommand;
 
     private static $defaultCommands = [
-        'help'              => "sveil\\think\\console\\command\\Help",
-        'list'              => "sveil\\think\\console\\command\\Lists",
-        'build'             => "sveil\\think\\console\\command\\Build",
-        'clear'             => "sveil\\think\\console\\command\\Clear",
-        'make:command'      => "sveil\\think\\console\\command\\make\\Command",
-        'make:controller'   => "sveil\\think\\console\\command\\make\\Controller",
-        'make:model'        => "sveil\\think\\console\\command\\make\\Model",
-        'make:middleware'   => "sveil\\think\\console\\command\\make\\Middleware",
-        'make:validate'     => "sveil\\think\\console\\command\\make\\Validate",
-        'optimize:autoload' => "sveil\\think\\console\\command\\optimize\\Autoload",
-        'optimize:config'   => "sveil\\think\\console\\command\\optimize\\Config",
-        'optimize:schema'   => "sveil\\think\\console\\command\\optimize\\Schema",
-        'optimize:route'    => "sveil\\think\\console\\command\\optimize\\Route",
-        'run'               => "sveil\\think\\console\\command\\RunServer",
-        'version'           => "sveil\\think\\console\\command\\Version",
-        'route:list'        => "sveil\\think\\console\\command\\RouteList",
+        'help'              => "sveil\\console\\command\\Help",
+        'list'              => "sveil\\console\\command\\Lists",
+        'build'             => "sveil\\console\\command\\Build",
+        'clear'             => "sveil\\console\\command\\Clear",
+        'make:command'      => "sveil\\console\\command\\make\\Command",
+        'make:controller'   => "sveil\\console\\command\\make\\Controller",
+        'make:model'        => "sveil\\console\\command\\make\\Model",
+        'make:middleware'   => "sveil\\console\\command\\make\\Middleware",
+        'make:validate'     => "sveil\\console\\command\\make\\Validate",
+        'optimize:autoload' => "sveil\\console\\command\\optimize\\Autoload",
+        'optimize:config'   => "sveil\\console\\command\\optimize\\Config",
+        'optimize:schema'   => "sveil\\console\\command\\optimize\\Schema",
+        'optimize:route'    => "sveil\\console\\command\\optimize\\Route",
+        'run'               => "sveil\\console\\command\\RunServer",
+        'version'           => "sveil\\console\\command\\Version",
+        'route:list'        => "sveil\\console\\command\\RouteList",
     ];
 
     /**
@@ -392,7 +392,7 @@ class Console
     public function addCommands(array $commands)
     {
         foreach ($commands as $key => $command) {
-            if (is_subclass_of($command, "\\sveil\\think\\console\\Command")) {
+            if (is_subclass_of($command, "\\sveil\\console\\Command")) {
                 // 注册指令
                 $this->add($command, is_numeric($key) ? '' : $key);
             }

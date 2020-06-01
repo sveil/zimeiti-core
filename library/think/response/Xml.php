@@ -10,11 +10,11 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\response;
+namespace sveil\response;
 
-use sveil\think\Collection;
-use sveil\think\Model;
-use sveil\think\Response;
+use sveil\Collection;
+use sveil\Model;
+use sveil\Response;
 
 class Xml extends Response
 {

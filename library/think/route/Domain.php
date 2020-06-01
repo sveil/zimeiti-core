@@ -10,14 +10,14 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\route;
+namespace sveil\route;
 
-use sveil\think\Container;
-use sveil\think\Loader;
-use sveil\think\Route;
-use sveil\think\route\dispatch\Callback as CallbackDispatch;
-use sveil\think\route\dispatch\Controller as ControllerDispatch;
-use sveil\think\route\dispatch\Module as ModuleDispatch;
+use sveil\Container;
+use sveil\Loader;
+use sveil\Route;
+use sveil\route\dispatch\Callback as CallbackDispatch;
+use sveil\route\dispatch\Controller as ControllerDispatch;
+use sveil\route\dispatch\Module as ModuleDispatch;
 
 class Domain extends RuleGroup
 {

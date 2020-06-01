@@ -10,11 +10,11 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\model\relation;
+namespace sveil\model\relation;
 
 use Closure;
-use sveil\think\Loader;
-use sveil\think\Model;
+use sveil\Loader;
+use sveil\Model;
 
 class BelongsTo extends OneToOne
 {

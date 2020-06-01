@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
 use InvalidArgumentException;
-use sveil\think\db\Query;
+use sveil\db\Query;
 
 /**
  * Class Model

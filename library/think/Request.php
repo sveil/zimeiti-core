@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\facade\Cookie;
-use sveil\think\facade\Session;
+use sveil\facade\Cookie;
+use sveil\facade\Session;
 
 class Request
 {

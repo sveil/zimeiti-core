@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\route\dispatch;
+namespace sveil\route\dispatch;
 
-use sveil\think\route\Dispatch;
+use sveil\route\Dispatch;
 
 class Callback extends Dispatch
 {

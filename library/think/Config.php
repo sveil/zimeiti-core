@@ -10,7 +10,7 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
 use Yaconf;
 
@@ -102,7 +102,7 @@ class Config implements \ArrayAccess
             $type = pathinfo($config, PATHINFO_EXTENSION);
         }
 
-        $object = Loader::factory($type, '\\sveil\\think\\config\\driver\\', $config);
+        $object = Loader::factory($type, '\\sveil\\config\\driver\\', $config);
 
         return $this->set($object->parse(), $name);
     }

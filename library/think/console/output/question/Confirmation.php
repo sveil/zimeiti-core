@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\output\question;
+namespace sveil\console\output\question;
 
-use sveil\think\console\output\Question;
+use sveil\console\output\Question;
 
 class Confirmation extends Question
 {

@@ -10,17 +10,17 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\route;
+namespace sveil\route;
 
-use sveil\think\Container;
-use sveil\think\Request;
-use sveil\think\Response;
-use sveil\think\route\dispatch\Callback as CallbackDispatch;
-use sveil\think\route\dispatch\Controller as ControllerDispatch;
-use sveil\think\route\dispatch\Module as ModuleDispatch;
-use sveil\think\route\dispatch\Redirect as RedirectDispatch;
-use sveil\think\route\dispatch\Response as ResponseDispatch;
-use sveil\think\route\dispatch\View as ViewDispatch;
+use sveil\Container;
+use sveil\Request;
+use sveil\Response;
+use sveil\route\dispatch\Callback as CallbackDispatch;
+use sveil\route\dispatch\Controller as ControllerDispatch;
+use sveil\route\dispatch\Module as ModuleDispatch;
+use sveil\route\dispatch\Redirect as RedirectDispatch;
+use sveil\route\dispatch\Response as ResponseDispatch;
+use sveil\route\dispatch\View as ViewDispatch;
 
 abstract class Rule
 {

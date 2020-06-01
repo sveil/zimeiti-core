@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\response;
+namespace sveil\response;
 
-use sveil\think\Response;
+use sveil\Response;
 
 class View extends Response
 {

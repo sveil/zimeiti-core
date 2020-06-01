@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\process\pipes;
+namespace sveil\process\pipes;
 
-use sveil\think\Process;
+use sveil\Process;
 
 class Unix extends Pipes
 {

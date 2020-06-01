@@ -10,11 +10,11 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\db\connector;
+namespace sveil\db\connector;
 
 use PDO;
-use sveil\think\db\Connection;
-use sveil\think\db\Query;
+use sveil\db\Connection;
+use sveil\db\Query;
 
 /**
  * mysql数据库驱动
@@ -22,7 +22,7 @@ use sveil\think\db\Query;
 class Mysql extends Connection
 {
 
-    protected $builder = '\\sveil\\think\\db\\builder\\Mysql';
+    protected $builder = '\\sveil\\db\\builder\\Mysql';
 
     /**
      * 初始化

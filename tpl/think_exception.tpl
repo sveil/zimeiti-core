@@ -286,7 +286,7 @@
     <div class="echo">
         <?php echo $echo;?>
     </div>
-    <?php if(\sveil\think\facade\App::isDebug()) { ?>
+    <?php if(\sveil\facade\App::isDebug()) { ?>
     <div class="exception">
     <div class="message">
 

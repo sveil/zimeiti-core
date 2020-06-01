@@ -10,7 +10,7 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\config\driver;
+namespace sveil\config\driver;
 
 class Xml
 {

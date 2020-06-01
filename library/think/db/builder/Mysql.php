@@ -10,12 +10,12 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\db\builder;
+namespace sveil\db\builder;
 
-use sveil\think\db\Builder;
-use sveil\think\db\Expression;
-use sveil\think\db\Query;
-use sveil\think\Exception;
+use sveil\db\Builder;
+use sveil\db\Expression;
+use sveil\db\Query;
+use sveil\Exception;
 
 /**
  * mysql数据库驱动

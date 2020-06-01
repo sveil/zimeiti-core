@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\process\exception;
+namespace sveil\process\exception;
 
-use sveil\think\Process;
+use sveil\Process;
 
 class Faild extends \RuntimeException
 {

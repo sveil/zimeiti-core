@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\output;
+namespace sveil\console\output;
 
-use sveil\think\console\output\formatter\Stack as StyleStack;
-use sveil\think\console\output\formatter\Style;
+use sveil\console\output\formatter\Stack as StyleStack;
+use sveil\console\output\formatter\Style;
 
 class Formatter
 {

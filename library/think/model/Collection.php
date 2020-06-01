@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\model;
+namespace sveil\model;
 
-use sveil\think\Collection as BaseCollection;
-use sveil\think\Model;
+use sveil\Collection as BaseCollection;
+use sveil\Model;
 
 class Collection extends BaseCollection
 {

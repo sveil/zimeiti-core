@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\cache\driver;
+namespace sveil\cache\driver;
 
-use sveil\think\cache\Driver;
+use sveil\cache\Driver;
 
 /**
  * Xcache缓存驱动

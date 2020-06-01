@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\exception;
+namespace sveil\exception;
 
-use sveil\think\Exception;
+use sveil\Exception;
 
 /**
  * Database相关异常处理类

@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\facade;
+namespace sveil\facade;
 
-use sveil\think\Facade;
+use sveil\Facade;
 
 /**
  * @see \think\View

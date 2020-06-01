@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\cache\Driver;
+use sveil\cache\Driver;
 
 /**
  * Class Cache
@@ -68,7 +68,7 @@ class Cache
                 $name = md5(serialize($options));
             }
 
-            $this->instance[$name] = Loader::factory($type, '\\sveil\\think\\cache\\driver\\', $options);
+            $this->instance[$name] = Loader::factory($type, '\\sveil\\cache\\driver\\', $options);
         }
 
         return $this->instance[$name];

@@ -10,12 +10,12 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console;
+namespace sveil\console;
 
-use sveil\think\Console;
-use sveil\think\console\input\Argument;
-use sveil\think\console\input\Definition;
-use sveil\think\console\input\Option;
+use sveil\Console;
+use sveil\console\input\Argument;
+use sveil\console\input\Definition;
+use sveil\console\input\Option;
 
 class Command
 {

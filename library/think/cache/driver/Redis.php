@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\cache\driver;
+namespace sveil\cache\driver;
 
-use sveil\think\cache\Driver;
+use sveil\cache\Driver;
 
 /**
  * Redis缓存驱动，适合单机部署、有前端代理实现高可用的场景，性能最好

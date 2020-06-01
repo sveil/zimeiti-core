@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\route\dispatch;
+namespace sveil\route\dispatch;
 
-use sveil\think\Response;
-use sveil\think\route\Dispatch;
+use sveil\Response;
+use sveil\route\Dispatch;
 
 class View extends Dispatch
 {

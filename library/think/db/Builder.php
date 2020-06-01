@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\db;
+namespace sveil\db;
 
 use PDO;
-use sveil\think\Exception;
+use sveil\Exception;
 
 abstract class Builder
 {

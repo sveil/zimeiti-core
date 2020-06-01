@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\db\builder;
+namespace sveil\db\builder;
 
-use sveil\think\db\Builder;
-use sveil\think\db\Query;
+use sveil\db\Builder;
+use sveil\db\Query;
 
 /**
  * Sqlite数据库驱动

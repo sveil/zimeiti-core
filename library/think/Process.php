@@ -10,14 +10,14 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\process\exception\Failed as ProcessFailedException;
-use sveil\think\process\exception\Timeout as ProcessTimeoutException;
-use sveil\think\process\pipes\Pipes;
-use sveil\think\process\pipes\Unix as UnixPipes;
-use sveil\think\process\pipes\Windows as WindowsPipes;
-use sveil\think\process\Utils;
+use sveil\process\exception\Failed as ProcessFailedException;
+use sveil\process\exception\Timeout as ProcessTimeoutException;
+use sveil\process\pipes\Pipes;
+use sveil\process\pipes\Unix as UnixPipes;
+use sveil\process\pipes\Windows as WindowsPipes;
+use sveil\process\Utils;
 
 class Process
 {

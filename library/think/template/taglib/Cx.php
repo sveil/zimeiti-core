@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\template\taglib;
+namespace sveil\template\taglib;
 
-use sveil\think\template\TagLib;
+use sveil\template\TagLib;
 
 /**
  * CX标签库解析类

@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\paginator\driver;
+namespace sveil\paginator\driver;
 
-use sveil\think\Paginator;
+use sveil\Paginator;
 
 class Bootstrap extends Paginator
 {

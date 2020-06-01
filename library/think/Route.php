@@ -10,15 +10,15 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\exception\RouteNotFoundException;
-use sveil\think\route\AliasRule;
-use sveil\think\route\dispatch\Url as UrlDispatch;
-use sveil\think\route\Domain;
-use sveil\think\route\Resource;
-use sveil\think\route\RuleGroup;
-use sveil\think\route\RuleItem;
+use sveil\exception\RouteNotFoundException;
+use sveil\route\AliasRule;
+use sveil\route\dispatch\Url as UrlDispatch;
+use sveil\route\Domain;
+use sveil\route\Resource;
+use sveil\route\RuleGroup;
+use sveil\route\RuleItem;
 
 class Route
 {

@@ -10,12 +10,12 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\view\driver;
+namespace sveil\view\driver;
 
-use sveil\think\App;
-use sveil\think\exception\TemplateNotFoundException;
-use sveil\think\Loader;
-use sveil\think\Template;
+use sveil\App;
+use sveil\exception\TemplateNotFoundException;
+use sveil\Loader;
+use sveil\Template;
 
 class Think
 {

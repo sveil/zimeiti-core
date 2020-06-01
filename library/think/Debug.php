@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\model\Collection as ModelCollection;
-use sveil\think\response\Redirect;
+use sveil\model\Collection as ModelCollection;
+use sveil\response\Redirect;
 
 class Debug
 {
@@ -251,7 +251,7 @@ class Debug
 
         unset($config['type']);
 
-        $trace = Loader::factory($type, '\\sveil\\think\\debug\\', $config);
+        $trace = Loader::factory($type, '\\sveil\\debug\\', $config);
 
         if ($response instanceof Redirect) {
             //TODO 记录

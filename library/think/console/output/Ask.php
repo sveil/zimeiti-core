@@ -10,12 +10,12 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\output;
+namespace sveil\console\output;
 
-use sveil\think\console\Input;
-use sveil\think\console\Output;
-use sveil\think\console\output\question\Choice;
-use sveil\think\console\output\question\Confirmation;
+use sveil\console\Input;
+use sveil\console\Output;
+use sveil\console\output\question\Choice;
+use sveil\console\output\question\Confirmation;
 
 class Ask
 {

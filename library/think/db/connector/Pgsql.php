@@ -10,17 +10,17 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\db\connector;
+namespace sveil\db\connector;
 
 use PDO;
-use sveil\think\db\Connection;
+use sveil\db\Connection;
 
 /**
  * Pgsql数据库驱动
  */
 class Pgsql extends Connection
 {
-    protected $builder = '\\sveil\\think\\db\\builder\\Pgsql';
+    protected $builder = '\\sveil\\db\\builder\\Pgsql';
 
     // PDO连接参数
     protected $params = [

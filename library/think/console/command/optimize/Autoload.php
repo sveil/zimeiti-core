@@ -10,12 +10,12 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\command\optimize;
+namespace sveil\console\command\optimize;
 
-use sveil\think\console\Command;
-use sveil\think\console\Input;
-use sveil\think\console\Output;
-use sveil\think\Container;
+use sveil\console\Command;
+use sveil\console\Input;
+use sveil\console\Output;
+use sveil\Container;
 
 class Autoload extends Command
 {
@@ -40,7 +40,7 @@ EOF;
         $app              = Container::get('app');
         $namespacesToScan = [
             $app->getNamespace() . '\\' => realpath(rtrim($app->getAppPath())),
-            'sveil\\think\\'            => $app->getThinkPath() . 'library/think',
+            'sveil\\'            => $app->getThinkPath() . 'library/think',
             ''                          => realpath(rtrim($app->getRootPath() . 'extend')),
         ];
 

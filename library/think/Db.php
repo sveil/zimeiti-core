@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\db\Connection;
+use sveil\db\Connection;
 
 /**
  * Class Db
@@ -94,7 +94,7 @@ class Db
         self::$config = $config;
 
         if (empty($config['query'])) {
-            self::$config['query'] = '\\sveil\\think\\db\\Query';
+            self::$config['query'] = '\\sveil\\db\\Query';
         }
     }
 

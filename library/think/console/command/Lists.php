@@ -10,14 +10,14 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\command;
+namespace sveil\console\command;
 
-use sveil\think\console\Command;
-use sveil\think\console\Input;
-use sveil\think\console\input\Argument as InputArgument;
-use sveil\think\console\input\Definition as InputDefinition;
-use sveil\think\console\input\Option as InputOption;
-use sveil\think\console\Output;
+use sveil\console\Command;
+use sveil\console\Input;
+use sveil\console\input\Argument as InputArgument;
+use sveil\console\input\Definition as InputDefinition;
+use sveil\console\input\Option as InputOption;
+use sveil\console\Output;
 
 class Lists extends Command
 {

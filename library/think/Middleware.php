@@ -10,11 +10,11 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
 use InvalidArgumentException;
 use LogicException;
-use sveil\think\exception\HttpResponseException;
+use sveil\exception\HttpResponseException;
 
 class Middleware
 {

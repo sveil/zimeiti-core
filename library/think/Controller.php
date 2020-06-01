@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\exception\ValidateException;
-use sveil\think\controller\Jump;
+use sveil\exception\ValidateException;
+use sveil\controller\Jump;
 
 class Controller
 {

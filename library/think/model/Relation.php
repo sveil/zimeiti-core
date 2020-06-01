@@ -10,11 +10,11 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\model;
+namespace sveil\model;
 
-use sveil\think\db\Query;
-use sveil\think\Exception;
-use sveil\think\Model;
+use sveil\db\Query;
+use sveil\Exception;
+use sveil\Model;
 
 /**
  * Class Relation

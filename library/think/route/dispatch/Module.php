@@ -10,14 +10,14 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\route\dispatch;
+namespace sveil\route\dispatch;
 
 use ReflectionMethod;
-use sveil\think\exception\ClassNotFoundException;
-use sveil\think\exception\HttpException;
-use sveil\think\Loader;
-use sveil\think\Request;
-use sveil\think\route\Dispatch;
+use sveil\exception\ClassNotFoundException;
+use sveil\exception\HttpException;
+use sveil\Loader;
+use sveil\Request;
+use sveil\route\Dispatch;
 
 class Module extends Dispatch
 {

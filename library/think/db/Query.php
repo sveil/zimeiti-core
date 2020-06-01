@@ -10,24 +10,24 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\db;
+namespace sveil\db;
 
 use PDO;
-use sveil\think\Collection;
-use sveil\think\Container;
-use sveil\think\Db;
-use sveil\think\db\exception\BindParamException;
-use sveil\think\db\exception\DataNotFoundException;
-use sveil\think\db\exception\ModelNotFoundException;
-use sveil\think\Exception;
-use sveil\think\exception\DbException;
-use sveil\think\exception\PDOException;
-use sveil\think\Loader;
-use sveil\think\Model;
-use sveil\think\model\Collection as ModelCollection;
-use sveil\think\model\Relation;
-use sveil\think\model\relation\OneToOne;
-use sveil\think\Paginator;
+use sveil\Collection;
+use sveil\Container;
+use sveil\Db;
+use sveil\db\exception\BindParamException;
+use sveil\db\exception\DataNotFoundException;
+use sveil\db\exception\ModelNotFoundException;
+use sveil\Exception;
+use sveil\exception\DbException;
+use sveil\exception\PDOException;
+use sveil\Loader;
+use sveil\Model;
+use sveil\model\Collection as ModelCollection;
+use sveil\model\Relation;
+use sveil\model\relation\OneToOne;
+use sveil\Paginator;
 
 class Query
 {
@@ -1786,7 +1786,7 @@ class Query
         }
 
         /** @var Paginator $class */
-        $class = false !== strpos($config['type'], '\\') ? $config['type'] : '\\sveil\\think\\paginator\\driver\\' . ucwords($config['type']);
+        $class = false !== strpos($config['type'], '\\') ? $config['type'] : '\\sveil\\paginator\\driver\\' . ucwords($config['type']);
         $page  = isset($config['page']) ? (int) $config['page'] : call_user_func([
             $class,
             'getCurrentPage',

@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\exception\ClassNotFoundException;
+use sveil\exception\ClassNotFoundException;
 
 class Loader
 {
@@ -77,7 +77,7 @@ class Loader
     public static function register($autoload = '')
     {
         // 注册系统自动加载
-        spl_autoload_register($autoload ?: 'sveil\\think\\Loader::autoload', true, true);
+        spl_autoload_register($autoload ?: 'sveil\\Loader::autoload', true, true);
 
         $rootPath = self::getRootPath();
 
@@ -85,7 +85,7 @@ class Loader
 
         // 注册命名空间定义
         self::addNamespace([
-            'sveil\think' => __DIR__,
+            'sveil' => __DIR__,
         ]);
 
         // 加载类库映射文件

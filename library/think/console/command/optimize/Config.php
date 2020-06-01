@@ -10,14 +10,14 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\command\optimize;
+namespace sveil\console\command\optimize;
 
-use sveil\think\console\Command;
-use sveil\think\console\Input;
-use sveil\think\console\input\Argument;
-use sveil\think\console\Output;
-use sveil\think\Container;
-use sveil\think\facade\App;
+use sveil\console\Command;
+use sveil\console\Input;
+use sveil\console\input\Argument;
+use sveil\console\Output;
+use sveil\Container;
+use sveil\facade\App;
 
 class Config extends Command
 {

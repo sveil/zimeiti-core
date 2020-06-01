@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\output\driver;
+namespace sveil\console\output\driver;
 
-use sveil\think\console\Output;
-use sveil\think\console\output\Formatter;
+use sveil\console\Output;
+use sveil\console\output\Formatter;
 
 class Console
 {

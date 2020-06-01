@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\command\make;
+namespace sveil\console\command\make;
 
-use sveil\think\console\command\Make;
+use sveil\console\command\Make;
 
 class Validate extends Make
 {

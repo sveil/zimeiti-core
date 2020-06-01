@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\db\exception;
+namespace sveil\db\exception;
 
-use sveil\think\exception\DbException;
+use sveil\exception\DbException;
 
 /**
  * PDO参数绑定异常

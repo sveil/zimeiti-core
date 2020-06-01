@@ -10,21 +10,21 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\model\concern;
+namespace sveil\model\concern;
 
-use sveil\think\Collection;
-use sveil\think\db\Query;
-use sveil\think\Loader;
-use sveil\think\Model;
-use sveil\think\model\Relation;
-use sveil\think\model\relation\BelongsTo;
-use sveil\think\model\relation\BelongsToMany;
-use sveil\think\model\relation\HasMany;
-use sveil\think\model\relation\HasManyThrough;
-use sveil\think\model\relation\HasOne;
-use sveil\think\model\relation\MorphMany;
-use sveil\think\model\relation\MorphOne;
-use sveil\think\model\relation\MorphTo;
+use sveil\Collection;
+use sveil\db\Query;
+use sveil\Loader;
+use sveil\Model;
+use sveil\model\Relation;
+use sveil\model\relation\BelongsTo;
+use sveil\model\relation\BelongsToMany;
+use sveil\model\relation\HasMany;
+use sveil\model\relation\HasManyThrough;
+use sveil\model\relation\HasOne;
+use sveil\model\relation\MorphMany;
+use sveil\model\relation\MorphOne;
+use sveil\model\relation\MorphTo;
 
 /**
  * 模型关联处理

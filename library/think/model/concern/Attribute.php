@@ -10,13 +10,13 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\model\concern;
+namespace sveil\model\concern;
 
 use InvalidArgumentException;
-use sveil\think\db\Expression;
-use sveil\think\Exception;
-use sveil\think\Loader;
-use sveil\think\model\Relation;
+use sveil\db\Expression;
+use sveil\Exception;
+use sveil\Loader;
+use sveil\model\Relation;
 
 trait Attribute
 {

@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\output\descriptor;
+namespace sveil\console\output\descriptor;
 
-use sveil\think\Console as ThinkConsole;
-use sveil\think\console\Command;
+use sveil\Console as ThinkConsole;
+use sveil\console\Command;
 
 class Console
 {

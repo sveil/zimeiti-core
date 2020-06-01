@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\log\driver;
+namespace sveil\log\driver;
 
-use sveil\think\App;
+use sveil\App;
 
 /**
  * github: https://github.com/luofei614/SocketLog

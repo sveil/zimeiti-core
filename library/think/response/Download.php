@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\response;
+namespace sveil\response;
 
-use sveil\think\Exception;
-use sveil\think\Response;
+use sveil\Exception;
+use sveil\Response;
 
 class Download extends Response
 {

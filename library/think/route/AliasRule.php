@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\route;
+namespace sveil\route;
 
-use sveil\think\Route;
+use sveil\Route;
 
 class AliasRule extends Domain
 {

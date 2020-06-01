@@ -10,13 +10,13 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\route;
+namespace sveil\route;
 
-use sveil\think\App;
-use sveil\think\Container;
-use sveil\think\exception\ValidateException;
-use sveil\think\Request;
-use sveil\think\Response;
+use sveil\App;
+use sveil\Container;
+use sveil\exception\ValidateException;
+use sveil\Request;
+use sveil\Response;
 
 abstract class Dispatch
 {

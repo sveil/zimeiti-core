@@ -10,7 +10,7 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
 class View
 {
@@ -123,7 +123,7 @@ class View
             unset($options['type']);
         }
 
-        $this->engine = Loader::factory($type, '\\sveil\\think\\view\\driver\\', $options);
+        $this->engine = Loader::factory($type, '\\sveil\\view\\driver\\', $options);
 
         return $this;
     }

@@ -10,15 +10,15 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\route;
+namespace sveil\route;
 
-use sveil\think\Container;
-use sveil\think\Exception;
-use sveil\think\Request;
-use sveil\think\Response;
-use sveil\think\Route;
-use sveil\think\route\dispatch\Response as ResponseDispatch;
-use sveil\think\route\dispatch\Url as UrlDispatch;
+use sveil\Container;
+use sveil\Exception;
+use sveil\Request;
+use sveil\Response;
+use sveil\Route;
+use sveil\route\dispatch\Response as ResponseDispatch;
+use sveil\route\dispatch\Url as UrlDispatch;
 
 class RuleGroup extends Rule
 {

@@ -10,15 +10,15 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console\command;
+namespace sveil\console\command;
 
-use sveil\think\console\Command;
-use sveil\think\console\Input;
-use sveil\think\console\input\Argument;
-use sveil\think\console\Output;
-use sveil\think\facade\App;
-use sveil\think\facade\Config;
-use sveil\think\facade\Env;
+use sveil\console\Command;
+use sveil\console\Input;
+use sveil\console\input\Argument;
+use sveil\console\Output;
+use sveil\facade\App;
+use sveil\facade\Config;
+use sveil\facade\Env;
 
 abstract class Make extends Command
 {

@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
-use sveil\think\exception\TemplateNotFoundException;
+use sveil\exception\TemplateNotFoundException;
 
 /**
  * ThinkPHP分离出来的模板引擎
@@ -102,7 +102,7 @@ class Template
         // 初始化模板编译存储器
         $type = $this->config['compile_type'] ? $this->config['compile_type'] : 'File';
 
-        $this->storage = Loader::factory($type, '\\sveil\\think\\template\\driver\\', null);
+        $this->storage = Loader::factory($type, '\\sveil\\template\\driver\\', null);
     }
 
     public static function __make(Config $config)
@@ -769,7 +769,7 @@ class Template
             $className = $tagLib;
             $tagLib    = substr($tagLib, strrpos($tagLib, '\\') + 1);
         } else {
-            $className = '\\sveil\\think\\template\\taglib\\' . ucwords($tagLib);
+            $className = '\\sveil\\template\\taglib\\' . ucwords($tagLib);
         }
 
         $tLib = new $className($this);

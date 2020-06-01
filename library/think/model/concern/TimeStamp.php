@@ -10,7 +10,7 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\model\concern;
+namespace sveil\model\concern;
 
 use DateTime;
 

@@ -10,16 +10,16 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\model\relation;
+namespace sveil\model\relation;
 
 use Closure;
-use sveil\think\Collection;
-use sveil\think\db\Query;
-use sveil\think\Exception;
-use sveil\think\Loader;
-use sveil\think\Model;
-use sveil\think\model\Pivot;
-use sveil\think\model\Relation;
+use sveil\Collection;
+use sveil\db\Query;
+use sveil\Exception;
+use sveil\Loader;
+use sveil\Model;
+use sveil\model\Pivot;
+use sveil\model\Relation;
 
 class BelongsToMany extends Relation
 {
@@ -106,7 +106,7 @@ class BelongsToMany extends Relation
      */
     protected function newPivot($data = [], $isUpdate = false)
     {
-        $class = $this->pivotName ?: '\\sveil\\think\\model\\Pivot';
+        $class = $this->pivotName ?: '\\sveil\\model\\Pivot';
         $pivot = new $class($data, $this->parent, $this->middle);
 
         if ($pivot instanceof Pivot) {

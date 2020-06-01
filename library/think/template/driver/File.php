@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\template\driver;
+namespace sveil\template\driver;
 
-use sveil\think\Exception;
+use sveil\Exception;
 
 class File
 {

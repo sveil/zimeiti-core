@@ -10,12 +10,12 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\controller;
+namespace sveil\controller;
 
-use sveil\think\Container;
-use sveil\think\exception\HttpResponseException;
-use sveil\think\Response;
-use sveil\think\response\Redirect;
+use sveil\Container;
+use sveil\exception\HttpResponseException;
+use sveil\Response;
+use sveil\response\Redirect;
 
 /**
  * 用法：

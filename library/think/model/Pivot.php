@@ -10,9 +10,9 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\model;
+namespace sveil\model;
 
-use sveil\think\Model;
+use sveil\Model;
 
 class Pivot extends Model
 {

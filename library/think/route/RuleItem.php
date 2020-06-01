@@ -10,11 +10,11 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\route;
+namespace sveil\route;
 
-use sveil\think\Container;
-use sveil\think\Exception;
-use sveil\think\Route;
+use sveil\Container;
+use sveil\Exception;
+use sveil\Route;
 
 class RuleItem extends Rule
 {

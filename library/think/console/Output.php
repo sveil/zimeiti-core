@@ -10,17 +10,17 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\console;
+namespace sveil\console;
 
 use Exception;
-use sveil\think\console\output\Ask;
-use sveil\think\console\output\Descriptor;
-use sveil\think\console\output\driver\Buffer;
-use sveil\think\console\output\driver\Console;
-use sveil\think\console\output\driver\Nothing;
-use sveil\think\console\output\Question;
-use sveil\think\console\output\question\Choice;
-use sveil\think\console\output\question\Confirmation;
+use sveil\console\output\Ask;
+use sveil\console\output\Descriptor;
+use sveil\console\output\driver\Buffer;
+use sveil\console\output\driver\Console;
+use sveil\console\output\driver\Nothing;
+use sveil\console\output\Question;
+use sveil\console\output\question\Choice;
+use sveil\console\output\question\Confirmation;
 
 /**
  * Class Output
@@ -67,7 +67,7 @@ class Output
 
     public function __construct($driver = 'console')
     {
-        $class = '\\sveil\\think\\console\\output\\driver\\' . ucwords($driver);
+        $class = '\\sveil\\console\\output\\driver\\' . ucwords($driver);
 
         $this->handle = new $class($this);
     }

@@ -10,7 +10,7 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think;
+namespace sveil;
 
 class Log implements LoggerInterface
 {
@@ -88,7 +88,7 @@ class Log implements LoggerInterface
             $this->allowWrite = false;
         }
 
-        $this->driver = Loader::factory($type, '\\sveil\\think\\log\\driver\\', $config);
+        $this->driver = Loader::factory($type, '\\sveil\\log\\driver\\', $config);
 
         return $this;
     }

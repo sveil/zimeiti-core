@@ -10,10 +10,10 @@
 // | github：https://github.com/sveil/zimeiti-core
 // +----------------------------------------------------------------------
 
-namespace sveil\think\session\driver;
+namespace sveil\session\driver;
 
 use SessionHandlerInterface;
-use sveil\think\Exception;
+use sveil\Exception;
 
 class Memcache implements SessionHandlerInterface
 {
