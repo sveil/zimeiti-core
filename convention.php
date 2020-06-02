@@ -149,7 +149,7 @@ return [
         'dispatch_success_tmpl'  => __DIR__ . '/tpl/dispatch_jump.tpl',
         'dispatch_error_tmpl'    => __DIR__ . '/tpl/dispatch_jump.tpl',
         // 异常页面的模板文件
-        'exception_tmpl'         => __DIR__ . '/tpl/think_exception.tpl',
+        'exception_tmpl'         => __DIR__ . '/tpl/sveil_exception.tpl',
         // 错误显示信息,非调试模式有效
         'error_message'          => '页面错误！请稍后再试～',
         // 显示错误信息
@@ -165,7 +165,7 @@ return [
     'template'   => [
         // 默认模板渲染规则 1 解析为小写+下划线 2 全部转换小写
         'auto_rule'    => 1,
-        // 模板引擎类型 支持 php think 支持扩展
+        // 模板引擎类型 支持 php sveil 支持扩展
         'type'         => 'Think',
         // 视图基础目录，配置目录为所有模块的视图起始目录
         'view_base'    => '',
@@ -236,7 +236,7 @@ return [
         // SESSION_ID的提交变量,解决flash上传跨域
         'var_session_id' => '',
         // SESSION 前缀
-        'prefix'         => 'think',
+        'prefix'         => 'sveil',
         // 驱动方式 支持redis memcache memcached
         'type'           => '',
         // 是否自动开启 SESSION

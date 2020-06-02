@@ -39,7 +39,7 @@ use sveil\Facade;
  * @method string getRootPath() static 获取应用根目录
  * @method string getAppPath() static 获取应用类库目录
  * @method string getRuntimePath() static 获取应用运行时目录
- * @method string getThinkPath() static 获取核心框架目录
+ * @method string getCorePath() static 获取核心框架目录
  * @method string getRoutePath() static 获取路由目录
  * @method string getConfigPath() static 获取应用配置目录
  * @method string getConfigExt() static 获取配置后缀

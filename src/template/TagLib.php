@@ -15,15 +15,14 @@ namespace sveil\template;
 use sveil\Exception;
 
 /**
- * ThinkPHP标签库TagLib解析基类
- * @category   Think
- * @package  Think
+ * SveilPHP标签库TagLib解析基类
+ * @category   Sveil
+ * @package  Sveil
  * @subpackage  Template
  * @author    liu21st <liu21st@gmail.com>
  */
 class TagLib
 {
-
     /**
      * 标签库定义XML文件
      * @var string

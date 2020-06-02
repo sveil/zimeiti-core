@@ -85,7 +85,7 @@ class Config extends Command
         }
 
         if ('' == $module) {
-            $content .= PHP_EOL . substr(php_strip_whitespace(App::getThinkPath() . 'helper.php'), 6) . PHP_EOL;
+            $content .= PHP_EOL . substr(php_strip_whitespace(App::getCorePath() . 'helper.php'), 6) . PHP_EOL;
 
             if (is_file($path . 'middleware.php')) {
                 $middleware = include $path . 'middleware.php';

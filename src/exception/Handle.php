@@ -157,7 +157,7 @@ class Handle
                     'Session'               => isset($_SESSION) ? $_SESSION : [],
                     'Server/Request Data'   => $_SERVER,
                     'Environment Variables' => $_ENV,
-                    'ThinkPHP Constants'    => $this->getConst(),
+                    'SveilPHP Constants'    => $this->getConst(),
                 ],
             ];
         } else {

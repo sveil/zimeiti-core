@@ -16,14 +16,13 @@ use sveil\template\TagLib;
 
 /**
  * CX标签库解析类
- * @category   Think
- * @package  Think
+ * @category   Sveil
+ * @package  Sveil
  * @subpackage  Driver.Taglib
  * @author    liu21st <liu21st@gmail.com>
  */
 class Cx extends Taglib
 {
-
     // 标签定义
     protected $tags = [
         // 标签定义： attr 属性列表 close 是否闭合（0 或者1 默认1） alias 标签别名 level 嵌套层次

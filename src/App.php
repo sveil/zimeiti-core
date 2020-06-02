@@ -21,7 +21,7 @@ use sveil\route\Dispatch;
  */
 class App extends Container
 {
-    const VERSION = '5.1.39 LTS';
+    const VERSION = '0.0.1';
 
     /**
      * 当前模块路径
@@ -75,7 +75,7 @@ class App extends Container
      * 框架目录
      * @var string
      */
-    protected $thinkPath;
+    protected $corePath;
 
     /**
      * 应用根目录
@@ -127,7 +127,7 @@ class App extends Container
 
     public function __construct($appPath = '')
     {
-        $this->thinkPath = dirname(__DIR__) . DIRECTORY_SEPARATOR;
+        $this->corePath = dirname(__DIR__) . DIRECTORY_SEPARATOR;
         $this->path($appPath);
     }
 
@@ -188,11 +188,11 @@ class App extends Container
         $this->configExt = $this->env->get('config_ext', '.php');
 
         // 加载惯例配置文件
-        $this->config->set(include $this->thinkPath . 'convention.php');
+        $this->config->set(include $this->corePath . 'convention.php');
 
         // 设置路径环境变量
         $this->env->set([
-            'think_path'   => $this->thinkPath,
+            'core_path'    => $this->corePath,
             'root_path'    => $this->rootPath,
             'app_path'     => $this->appPath,
             'config_path'  => $this->configPath,
@@ -293,7 +293,7 @@ class App extends Container
 
             if ('' == $module) {
                 // 加载系统助手函数
-                include $this->thinkPath . 'helper.php';
+                include $this->corePath . 'helper.php';
             }
 
             // 加载中间件
@@ -467,7 +467,7 @@ class App extends Container
 
         // 加载系统语言包
         $this->lang->load([
-            $this->thinkPath . 'lang' . DIRECTORY_SEPARATOR . $this->request->langset() . '.php',
+            $this->corePath . 'lang' . DIRECTORY_SEPARATOR . $this->request->langset() . '.php',
             $this->appPath . 'lang' . DIRECTORY_SEPARATOR . $this->request->langset() . '.php',
         ]);
     }
@@ -892,9 +892,9 @@ class App extends Container
      * @access public
      * @return string
      */
-    public function getThinkPath()
+    public function getCorePath()
     {
-        return $this->thinkPath;
+        return $this->corePath;
     }
 
     /**

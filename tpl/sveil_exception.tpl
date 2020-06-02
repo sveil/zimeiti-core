@@ -410,9 +410,9 @@
     <?php } ?>
 
     <div class="copyright">
-        <a title="官方网站" href="http://www.thinkphp.cn">ThinkPHP</a>
+        <a title="官方网站" href="http://www.sveil.com">SveilPHP</a>
         <span>V<?php echo \sveil\facade\App::version(); ?></span>
-        <span>{ 十年磨一剑-为API开发设计的高性能框架 }</span>
+        <span>{ 为手机网页开发设计的新晋高性能框架 }</span>
     </div>
     <?php if(\sveil\facade\App::isDebug()) { ?>
     <script>

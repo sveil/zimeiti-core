@@ -15,7 +15,7 @@ namespace sveil\exception;
 use sveil\Exception;
 
 /**
- * ThinkPHP错误异常
+ * SveilPHP错误异常
  * 主要用于封装 set_error_handler 和 register_shutdown_function 得到的错误
  * 除开从 sveil\Exception 继承的功能
  * 其他和PHP系统\ErrorException功能基本一样
