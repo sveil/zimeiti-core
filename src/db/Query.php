@@ -2491,7 +2491,7 @@ class Query
         if (is_array($value)) {
             $this->bind = array_merge($this->bind, $value);
         } else {
-            $name = $name ?: 'ThinkBind_' . (count($this->bind) + 1) . '_' . mt_rand() . '_';
+            $name = $name ?: 'SveilBind_' . (count($this->bind) + 1) . '_' . mt_rand() . '_';
 
             $this->bind[$name] = [$value, $type];
             return $name;

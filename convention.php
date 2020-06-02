@@ -166,7 +166,7 @@ return [
         // 默认模板渲染规则 1 解析为小写+下划线 2 全部转换小写
         'auto_rule'    => 1,
         // 模板引擎类型 支持 php sveil 支持扩展
-        'type'         => 'Think',
+        'type'         => 'Sveil',
         // 视图基础目录，配置目录为所有模块的视图起始目录
         'view_base'    => '',
         // 当前模板的视图目录 留空为自动获取
@@ -324,7 +324,7 @@ return [
 
     //控制台配置
     'console'    => [
-        'name'      => 'Think Console',
+        'name'      => 'Sveil Console',
         'version'   => '0.1',
         'user'      => null,
         'auto_path' => '',

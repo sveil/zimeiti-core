@@ -964,9 +964,9 @@ class Template
                         $vars  = explode('.', $match[0]);
                         $first = array_shift($vars);
 
-                        if ('$Think' == $first) {
-                            // 所有以Think.打头的以特殊变量对待 无需模板赋值就可以输出
-                            $parseStr = $this->parseThinkVar($vars);
+                        if ('$Sveil' == $first) {
+                            // 所有以Sveil.打头的以特殊变量对待 无需模板赋值就可以输出
+                            $parseStr = $this->parseSveilVar($vars);
                         } elseif ('$Request' == $first) {
                             // 获取Request请求对象参数
                             $method = array_shift($vars);
@@ -1101,12 +1101,12 @@ class Template
 
     /**
      * 特殊模板变量解析
-     * 格式 以 $Think. 打头的变量属于特殊模板变量
+     * 格式 以 $Sveil. 打头的变量属于特殊模板变量
      * @access public
      * @param  array $vars 变量数组
      * @return string
      */
-    public function parseThinkVar($vars)
+    public function parseSveilVar($vars)
     {
         $type  = strtoupper(trim(array_shift($vars)));
         $param = implode('.', $vars);

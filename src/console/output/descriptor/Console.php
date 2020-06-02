@@ -12,7 +12,7 @@
 
 namespace sveil\console\output\descriptor;
 
-use sveil\Console as ThinkConsole;
+use sveil\Console as SveilConsole;
 use sveil\console\Command;
 
 class Console
@@ -21,7 +21,7 @@ class Console
     const GLOBAL_NAMESPACE = '_global';
 
     /**
-     * @var ThinkConsole
+     * @var SveilConsole
      */
     private $console;
 
@@ -47,10 +47,10 @@ class Console
 
     /**
      * 构造方法
-     * @param ThinkConsole $console
+     * @param SveilConsole $console
      * @param string|null  $namespace
      */
-    public function __construct(ThinkConsole $console, $namespace = null)
+    public function __construct(SveilConsole $console, $namespace = null)
     {
         $this->console   = $console;
         $this->namespace = $namespace;

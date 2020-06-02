@@ -17,7 +17,7 @@ use sveil\exception\TemplateNotFoundException;
 use sveil\Loader;
 use sveil\Template;
 
-class Think
+class Sveil
 {
     // 模板引擎实例
     private $template;
