@@ -664,7 +664,7 @@ class Query
             // 支持GROUP
             $options = $this->getOptions();
             $subSql  = $this->options($options)
-                ->field('count(' . $field . ') AS think_count')
+                ->field('count(' . $field . ') AS sveil_count')
                 ->bind($this->bind)
                 ->buildSql();
 

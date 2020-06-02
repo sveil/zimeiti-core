@@ -315,7 +315,7 @@ class RuleGroup extends Rule
                     $pattern = array_merge($this->getPattern(), $item->getPattern());
                     $option  = array_merge($this->getOption(), $item->getOption());
 
-                    $regex[$key] = $this->buildRuleRegex($rule, $matches[0], $pattern, $option, $complete, '_THINK_' . $key);
+                    $regex[$key] = $this->buildRuleRegex($rule, $matches[0], $pattern, $option, $complete, '_SVEIL_' . $key);
                     $items[$key] = $item;
                 }
             }
@@ -335,7 +335,7 @@ class RuleGroup extends Rule
             $var = [];
             foreach ($match as $key => $val) {
                 if (is_string($key) && '' !== $val) {
-                    list($name, $pos) = explode('_THINK_', $key);
+                    list($name, $pos) = explode('_SVEIL_', $key);
 
                     $var[$name] = $val;
                 }
