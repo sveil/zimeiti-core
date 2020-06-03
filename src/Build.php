@@ -40,7 +40,7 @@ class Build
      * @param  bool   $suffix 类库后缀
      * @return void
      */
-    public function run(array $build = [], $namespace = 'app', $suffix = false)
+    public function run(array $build = [], $namespace = 'apps', $suffix = false)
     {
         // 锁定
         $lockfile = $this->basePath . 'build.lock';
@@ -110,7 +110,7 @@ class Build
      * @param  bool   $suffix 类库后缀
      * @return void
      */
-    public function module($module = '', $list = [], $namespace = 'app', $suffix = false)
+    public function module($module = '', $list = [], $namespace = 'apps', $suffix = false)
     {
         $module = $module ? $module : '';
 

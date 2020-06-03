@@ -128,7 +128,7 @@ class Container implements ArrayAccess, IteratorAggregate, Countable
      * @param  bool          $newInstance    是否每次创建新的实例
      * @return object
      */
-    public static function get($abstract, $vars = [], $newInstance = false)
+    public static function get($abstract = 'app', $vars = [], $newInstance = false)
     {
         return static::getInstance()->make($abstract, $vars, $newInstance);
     }

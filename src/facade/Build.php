@@ -17,8 +17,8 @@ use sveil\Facade;
 /**
  * @see \sveil\Build
  * @mixin \sveil\Build
- * @method void run(array $build = [], string $namespace = 'app', bool $suffix = false) static 根据传入的build资料创建目录和文件
- * @method void module(string $module = '', array $list = [], string $namespace = 'app', bool $suffix = false) static 创建模块
+ * @method void run(array $build = [], string $namespace = 'apps', bool $suffix = false) static 根据传入的build资料创建目录和文件
+ * @method void module(string $module = '', array $list = [], string $namespace = 'apps', bool $suffix = false) static 创建模块
  */
 class Build extends Facade
 {
