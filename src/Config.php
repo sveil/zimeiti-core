@@ -201,7 +201,7 @@ class Config implements \ArrayAccess
      * @param  string    $name 一级配置名
      * @return array
      */
-    public function pull($name)
+    public function pull($name = 'app')
     {
         $name = strtolower($name);
 

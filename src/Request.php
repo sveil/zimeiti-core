@@ -317,7 +317,7 @@ class Request
 
     public static function __make(App $app, Config $config)
     {
-        $request = new static($config->pull('app'));
+        $request = new static($config->pull());
 
         $request->server = $_SERVER;
         $request->env    = $app['env']->get();

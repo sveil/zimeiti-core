@@ -62,7 +62,7 @@ class Url
 
     public static function __make(App $app, Config $config)
     {
-        return new static($app, $config->pull('app'));
+        return new static($app, $config->pull());
     }
 
     /**
