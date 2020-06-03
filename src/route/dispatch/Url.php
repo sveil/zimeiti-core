@@ -139,7 +139,7 @@ class Url extends Dispatch
      */
     protected function autoFindController($module, &$path)
     {
-        $dir    = $this->app->getAppPath() . ($module ? $module . '/' : '') . $this->rule->getConfig('url_controller_layer');
+        $dir    = $this->app->getAppsPath() . ($module ? $module . '/' : '') . $this->rule->getConfig('url_controller_layer');
         $suffix = $this->app->getSuffix() || $this->rule->getConfig('controller_suffix') ? ucfirst($this->rule->getConfig('url_controller_layer')) : '';
 
         $item = [];

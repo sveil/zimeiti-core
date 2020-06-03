@@ -36,7 +36,7 @@ class Command extends Make
         $class = str_replace($namespace . '\\', '', $name);
         $stub  = file_get_contents($this->getStub());
 
-        return str_replace(['{%commandName%}', '{%className%}', '{%namespace%}', '{%app_namespace%}'], [
+        return str_replace(['{%commandName%}', '{%className%}', '{%namespace%}', '{%apps_namespace%}'], [
             $commandName,
             $class,
             $namespace,

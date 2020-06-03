@@ -45,7 +45,7 @@ class Build extends Command
         if ($input->hasOption('config')) {
             $build = include $input->getOption('config');
         } else {
-            $build = include App::getAppPath() . 'build.php';
+            $build = include App::getAppsPath() . 'build.php';
         }
 
         if (empty($build)) {
@@ -55,6 +55,5 @@ class Build extends Command
 
         AppBuild::run($build);
         $output->writeln("Successed");
-
     }
 }

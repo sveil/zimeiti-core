@@ -39,7 +39,7 @@ return [
 EOF;
         $app              = Container::get('app');
         $namespacesToScan = [
-            $app->getNamespace() . '\\' => realpath(rtrim($app->getAppPath())),
+            $app->getNamespace() . '\\' => realpath(rtrim($app->getAppsPath())),
             'sveil\\'                   => $app->getCorePath() . 'src',
             ''                          => realpath(rtrim($app->getRootPath() . 'extend')),
         ];
@@ -95,7 +95,7 @@ EOF;
     {
         $baseDir    = '';
         $app        = Container::get('app');
-        $appPath    = $this->normalizePath(realpath($app->getAppPath()));
+        $appsPath   = $this->normalizePath(realpath($app->getAppsPath()));
         $libPath    = $this->normalizePath(realpath($app->getCorePath() . 'src'));
         $extendPath = $this->normalizePath(realpath($app->getRootPath() . 'extend'));
         $path       = $this->normalizePath($path);
@@ -103,9 +103,9 @@ EOF;
         if (strpos($path, $libPath . '/') === 0) {
             $path    = substr($path, strlen($app->getCorePath() . 'src'));
             $baseDir = "'" . $libPath . "/'";
-        } elseif (strpos($path, $appPath . '/') === 0) {
-            $path    = substr($path, strlen($appPath) + 1);
-            $baseDir = "'" . $appPath . "/'";
+        } elseif (strpos($path, $appsPath . '/') === 0) {
+            $path    = substr($path, strlen($appsPath) + 1);
+            $baseDir = "'" . $appsPath . "/'";
         } elseif (strpos($path, $extendPath . '/') === 0) {
             $path    = substr($path, strlen($extendPath) + 1);
             $baseDir = "'" . $extendPath . "/'";

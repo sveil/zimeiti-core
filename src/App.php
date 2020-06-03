@@ -69,7 +69,7 @@ class App extends Container
      * 应用类库目录
      * @var string
      */
-    protected $appPath;
+    protected $appsPath;
 
     /**
      * 框架目录
@@ -125,10 +125,10 @@ class App extends Container
      */
     protected $initialized = false;
 
-    public function __construct($appPath = '')
+    public function __construct($appsPath = '')
     {
         $this->corePath = dirname(__DIR__) . DIRECTORY_SEPARATOR;
-        $this->path($appPath);
+        $this->path($appsPath);
     }
 
     /**
@@ -151,7 +151,7 @@ class App extends Container
      */
     public function path($path)
     {
-        $this->appPath = $path ? realpath($path) . DIRECTORY_SEPARATOR : $this->getAppPath();
+        $this->appsPath = $path ? realpath($path) . DIRECTORY_SEPARATOR : $this->getAppsPath();
 
         return $this;
     }
@@ -171,7 +171,7 @@ class App extends Container
         $this->beginTime   = microtime(true);
         $this->beginMem    = memory_get_usage();
 
-        $this->rootPath    = dirname($this->appPath) . DIRECTORY_SEPARATOR;
+        $this->rootPath    = dirname($this->appsPath) . DIRECTORY_SEPARATOR;
         $this->runtimePath = $this->rootPath . 'runtime' . DIRECTORY_SEPARATOR;
         $this->routePath   = $this->rootPath . 'route' . DIRECTORY_SEPARATOR;
         $this->configPath  = $this->rootPath . 'config' . DIRECTORY_SEPARATOR;
@@ -194,7 +194,7 @@ class App extends Container
         $this->env->set([
             'core_path'    => $this->corePath,
             'root_path'    => $this->rootPath,
-            'app_path'     => $this->appPath,
+            'apps_path'    => $this->appsPath,
             'config_path'  => $this->configPath,
             'route_path'   => $this->routePath,
             'runtime_path' => $this->runtimePath,
@@ -202,11 +202,11 @@ class App extends Container
             'vendor_path'  => $this->rootPath . 'vendor' . DIRECTORY_SEPARATOR,
         ]);
 
-        $this->namespace = $this->env->get('app_namespace', $this->namespace);
-        $this->env->set('app_namespace', $this->namespace);
+        $this->namespace = $this->env->get('apps_namespace', $this->namespace);
+        $this->env->set('apps_namespace', $this->namespace);
 
         // 注册应用命名空间
-        Loader::addNamespace($this->namespace, $this->appPath);
+        Loader::addNamespace($this->namespace, $this->appsPath);
 
         // 初始化应用
         $this->init();
@@ -270,7 +270,7 @@ class App extends Container
     {
         // 定位模块目录
         $module = $module ? $module . DIRECTORY_SEPARATOR : '';
-        $path   = $this->appPath . $module;
+        $path   = $this->appsPath . $module;
 
         // 加载初始化文件
         if (is_file($path . 'init.php')) {
@@ -357,7 +357,7 @@ class App extends Container
         $this->cache->init($config['cache'], true);
 
         // 加载当前模块语言包
-        $this->lang->load($this->appPath . $module . DIRECTORY_SEPARATOR . 'lang' . DIRECTORY_SEPARATOR . $this->request->langset() . '.php');
+        $this->lang->load($this->appsPath . $module . DIRECTORY_SEPARATOR . 'lang' . DIRECTORY_SEPARATOR . $this->request->langset() . '.php');
 
         // 模块请求缓存检查
         $this->checkRequestCache(
@@ -388,7 +388,7 @@ class App extends Container
             } elseif ($this->config('app.auto_bind_module')) {
                 // 入口自动绑定
                 $name = pathinfo($this->request->baseFile(), PATHINFO_FILENAME);
-                if ($name && 'index' != $name && is_dir($this->appPath . $name)) {
+                if ($name && 'index' != $name && is_dir($this->appsPath . $name)) {
                     $this->route->bind($name);
                 }
             }
@@ -468,7 +468,7 @@ class App extends Container
         // 加载系统语言包
         $this->lang->load([
             $this->corePath . 'lang' . DIRECTORY_SEPARATOR . $this->request->langset() . '.php',
-            $this->appPath . 'lang' . DIRECTORY_SEPARATOR . $this->request->langset() . '.php',
+            $this->appsPath . 'lang' . DIRECTORY_SEPARATOR . $this->request->langset() . '.php',
         ]);
     }
 
@@ -868,13 +868,13 @@ class App extends Container
      * @access public
      * @return string
      */
-    public function getAppPath()
+    public function getAppsPath()
     {
-        if (is_null($this->appPath)) {
-            $this->appPath = Loader::getRootPath() . 'apps' . DIRECTORY_SEPARATOR;
+        if (is_null($this->appsPath)) {
+            $this->appsPath = Loader::getRootPath() . 'apps' . DIRECTORY_SEPARATOR;
         }
 
-        return $this->appPath;
+        return $this->appsPath;
     }
 
     /**

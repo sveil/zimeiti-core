@@ -29,7 +29,7 @@ class Build
     public function __construct(App $app)
     {
         $this->app      = $app;
-        $this->basePath = $this->app->getAppPath();
+        $this->basePath = $this->app->getAppsPath();
     }
 
     /**

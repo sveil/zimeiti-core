@@ -50,7 +50,7 @@ class Config extends Command
     protected function buildCacheContent($module)
     {
         $content = '// This cache file is automatically generated at:' . date('Y-m-d H:i:s') . PHP_EOL;
-        $path    = realpath(App::getAppPath() . $module) . DIRECTORY_SEPARATOR;
+        $path    = realpath(App::getAppsPath() . $module) . DIRECTORY_SEPARATOR;
         if ($module) {
             $configPath = is_dir($path . 'config') ? $path . 'config' : App::getConfigPath() . $module;
         } else {
