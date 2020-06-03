@@ -12,8 +12,8 @@
 
 namespace sveil;
 
-use sveil\exception\ValidateException;
 use sveil\controller\Jump;
+use sveil\exception\ValidateException;
 
 class Controller
 {
@@ -61,7 +61,7 @@ class Controller
      */
     public function __construct(App $app = null)
     {
-        $this->app     = $app ?: Container::get('app');
+        $this->app     = $app ?: Container::get();
         $this->request = $this->app['request'];
         $this->view    = $this->app['view'];
 

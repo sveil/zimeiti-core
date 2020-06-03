@@ -37,7 +37,7 @@ class Autoload extends Command
 return [
 
 EOF;
-        $app              = Container::get('app');
+        $app              = Container::get();
         $namespacesToScan = [
             $app->getNamespace() . '\\' => realpath(rtrim($app->getAppsPath())),
             'sveil\\'                   => $app->getCorePath() . 'src',
@@ -94,7 +94,7 @@ EOF;
     protected function getPathCode($path)
     {
         $baseDir    = '';
-        $app        = Container::get('app');
+        $app        = Container::get();
         $appsPath   = $this->normalizePath(realpath($app->getAppsPath()));
         $libPath    = $this->normalizePath(realpath($app->getCorePath() . 'src'));
         $extendPath = $this->normalizePath(realpath($app->getRootPath() . 'extend'));

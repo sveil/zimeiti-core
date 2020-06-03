@@ -89,7 +89,7 @@ class Response
         $this->contentType($this->contentType, $this->charset);
 
         $this->code   = $code;
-        $this->app    = Container::get('app');
+        $this->app    = Container::get();
         $this->header = array_merge($this->header, $header);
     }
 

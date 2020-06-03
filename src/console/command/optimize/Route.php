@@ -27,7 +27,7 @@ class Route extends Command
 
     protected function execute(Input $input, Output $output)
     {
-        $filename = Container::get('app')->getRuntimePath() . 'route.php';
+        $filename = Container::get()->getRuntimePath() . 'route.php';
         if (is_file($filename)) {
             unlink($filename);
         }
@@ -40,7 +40,7 @@ class Route extends Command
         Container::get('route')->setName([]);
         Container::get('route')->setTestMode(true);
         // 路由检测
-        $path = Container::get('app')->getRoutePath();
+        $path = Container::get()->getRoutePath();
 
         $files = is_dir($path) ? scandir($path) : [];
 

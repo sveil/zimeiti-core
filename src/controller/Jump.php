@@ -165,14 +165,12 @@ trait Jump
     protected function getResponseType()
     {
         if (!$this->app) {
-            $this->app = Container::get('app');
+            $this->app = Container::get();
         }
 
         $isAjax = $this->app['request']->isAjax();
         $config = $this->app['config'];
 
-        return $isAjax
-        ? $config->get('default_ajax_return')
-        : $config->get('default_return_type');
+        return $isAjax ? $config->get('default_ajax_return') : $config->get('default_return_type');
     }
 }

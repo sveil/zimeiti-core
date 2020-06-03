@@ -66,7 +66,7 @@ abstract class Dispatch
     {
         $this->request  = $request;
         $this->rule     = $rule;
-        $this->app      = Container::get('app');
+        $this->app      = Container::get();
         $this->dispatch = $dispatch;
         $this->param    = $param;
         $this->code     = $code;
@@ -353,7 +353,7 @@ abstract class Dispatch
 
     public function __wakeup()
     {
-        $this->app     = Container::get('app');
+        $this->app     = Container::get();
         $this->request = $this->app['request'];
     }
 

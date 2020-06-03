@@ -998,7 +998,7 @@ class Validate
             $db = new $rule[0];
         } else {
             try {
-                $db = Container::get('app')->model($rule[0]);
+                $db = Container::get()->model($rule[0]);
             } catch (ClassNotFoundException $e) {
                 $db = Db::name($rule[0]);
             }
