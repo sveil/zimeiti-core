@@ -172,9 +172,9 @@ class App extends Container
         $this->beginMem    = memory_get_usage();
 
         $this->rootPath    = dirname($this->appsPath) . DIRECTORY_SEPARATOR;
-        $this->runtimePath = $this->rootPath . 'runtime' . DIRECTORY_SEPARATOR;
-        $this->routePath   = $this->rootPath . 'route' . DIRECTORY_SEPARATOR;
         $this->configPath  = $this->rootPath . 'config' . DIRECTORY_SEPARATOR;
+        $this->routePath   = $this->rootPath . 'route' . DIRECTORY_SEPARATOR;
+        $this->runtimePath = $this->rootPath . 'runtime' . DIRECTORY_SEPARATOR;
 
         static::setInstance($this);
 
@@ -199,6 +199,7 @@ class App extends Container
             'route_path'   => $this->routePath,
             'runtime_path' => $this->runtimePath,
             'extend_path'  => $this->rootPath . 'extend' . DIRECTORY_SEPARATOR,
+            'docs_path'    => $this->rootPath . 'docs' . DIRECTORY_SEPARATOR,
             'vendor_path'  => $this->rootPath . 'vendor' . DIRECTORY_SEPARATOR,
         ]);
 
