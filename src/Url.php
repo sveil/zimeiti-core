@@ -239,6 +239,180 @@ class Url
         return $url;
     }
 
+    /**
+     * URL生成 支持路由反射
+     * @access public
+     * @param  string            $url 路由地址
+     * @param  string|array      $vars 参数（支持数组和字符串）a=val&b=val2... ['a'=>'val1', 'b'=>'val2']
+     * @param  string|bool       $suffix 伪静态后缀，默认为true表示获取配置值
+     * @param  boolean|string    $domain 是否显示域名 或者直接传入域名
+     * @return string
+     */
+    public function builds($url = '', $vars = '', $suffix = true, $domain = false)
+    {
+        // 解析URL
+        if (0 === strpos($url, '[') && $pos = strpos($url, ']')) {
+            // [name] 表示使用路由命名标识生成URL
+            $name = substr($url, 1, $pos - 1);
+            $url  = 'name' . substr($url, $pos + 1);
+        }
+
+        if (false === strpos($url, '://') && 0 !== strpos($url, '/')) {
+            $info = parse_url($url);
+            $url  = !empty($info['path']) ? $info['path'] : '';
+
+            if (isset($info['fragment'])) {
+                // 解析锚点
+                $anchor = $info['fragment'];
+
+                if (false !== strpos($anchor, '?')) {
+                    // 解析参数
+                    list($anchor, $info['query']) = explode('?', $anchor, 2);
+                }
+
+                if (false !== strpos($anchor, '@')) {
+                    // 解析域名
+                    list($anchor, $domain) = explode('@', $anchor, 2);
+                }
+            } elseif (strpos($url, '@') && false === strpos($url, '\\')) {
+                // 解析域名
+                list($url, $domain) = explode('@', $url, 2);
+            }
+        }
+
+        // 解析参数
+        if (is_string($vars)) {
+            // aaa=1&bbb=2 转换成数组
+            parse_str($vars, $vars);
+        }
+
+        if ($url) {
+            $checkName   = isset($name) ? $name : $url . (isset($info['query']) ? '?' . $info['query'] : '');
+            $checkDomain = $domain && is_string($domain) ? $domain : null;
+
+            $rule = $this->app['route']->getName($checkName, $checkDomain);
+
+            if (is_null($rule) && isset($info['query'])) {
+                $rule = $this->app['route']->getName($url);
+                // 解析地址里面参数 合并到vars
+                parse_str($info['query'], $params);
+                $vars = array_merge($params, $vars);
+                unset($info['query']);
+            }
+        }
+
+        if (!empty($rule) && $match = $this->getRuleUrl($rule, $vars, $domain)) {
+            // 匹配路由命名标识
+            $url = $match[0];
+
+            if ($domain) {
+                $domain = $match[1];
+            }
+
+            if (!is_null($match[2])) {
+                $suffix = $match[2];
+            }
+        } elseif (!empty($rule) && isset($name)) {
+            throw new \InvalidArgumentException('route name not exists:' . $name);
+        } else {
+            // 检查别名路由
+            $alias      = $this->app['route']->getAlias();
+            $matchAlias = false;
+
+            if ($alias) {
+                // 别名路由解析
+                foreach ($alias as $key => $item) {
+                    $val = $item->getRoute();
+
+                    if (0 === strpos($url, $val)) {
+                        $url        = $key . substr($url, strlen($val));
+                        $matchAlias = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!$matchAlias) {
+                // 路由标识不存在 直接解析
+                $url = $this->parseUrls($url);
+            }
+
+            // 检测URL绑定
+            if (!$this->bindCheck) {
+                $bind = $this->app['route']->getBind($domain && is_string($domain) ? $domain : null);
+
+                if ($bind && 0 === strpos($url, $bind)) {
+                    $url = substr($url, strlen($bind) + 1);
+                } else {
+                    $binds = $this->app['route']->getBind(true);
+
+                    foreach ($binds as $key => $val) {
+                        if (is_string($val) && 0 === strpos($url, $val) && substr_count($val, '/') > 1) {
+                            $url    = substr($url, strlen($val) + 1);
+                            $domain = $key;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (isset($info['query'])) {
+                // 解析地址里面参数 合并到vars
+                parse_str($info['query'], $params);
+                $vars = array_merge($params, $vars);
+            }
+        }
+
+        // 还原URL分隔符
+        $depr = $this->config['pathinfo_depr'];
+        $url  = str_replace('/', $depr, $url);
+
+        // URL后缀
+        if ('/' == substr($url, -1) || '' == $url) {
+            $suffix = '';
+        } else {
+            $suffix = $this->parseSuffix($suffix);
+        }
+
+        // 锚点
+        $anchor = !empty($anchor) ? '#' . $anchor : '';
+
+        // 参数组装
+        if (!empty($vars)) {
+            // 添加参数
+            if ($this->config['url_common_param']) {
+                $vars = http_build_query($vars);
+                $url .= $suffix . '?' . $vars . $anchor;
+            } else {
+                $paramType = $this->config['url_param_type'];
+
+                foreach ($vars as $var => $val) {
+                    if ('' !== trim($val)) {
+                        if ($paramType) {
+                            $url .= $depr . urlencode($val);
+                        } else {
+                            $url .= $depr . $var . $depr . urlencode($val);
+                        }
+                    }
+                }
+
+                $url .= $suffix . $anchor;
+            }
+        } else {
+            $url .= $suffix . $anchor;
+        }
+
+        // 检测域名
+        $domain = $this->parseDomain($url, $domain);
+
+        // URL组装
+        $url = $domain . rtrim($this->root ?: $this->app['request']->root(), '/') . '/' . ltrim($url, '/');
+
+        $this->bindCheck = false;
+
+        return $url;
+    }
+
     // 直接解析URL地址
     protected function parseUrl($url)
     {
@@ -256,6 +430,47 @@ class Url
         } else {
             // 解析到 模块/控制器/操作
             $module     = $request->module();
+            $module     = $module ? $module . '/' : '';
+            $controller = $request->controller();
+
+            if ('' == $url) {
+                $action = $request->action();
+            } else {
+                $path       = explode('/', $url);
+                $action     = array_pop($path);
+                $controller = empty($path) ? $controller : array_pop($path);
+                $module     = empty($path) ? $module : array_pop($path) . '/';
+            }
+
+            if ($this->config['url_convert']) {
+                $action     = strtolower($action);
+                $controller = Loader::parseName($controller);
+            }
+
+            $url = $module . $controller . '/' . $action;
+        }
+
+        return $url;
+    }
+
+    // 直接解析URL地址
+    protected function parseUrls($url)
+    {
+        $request = $this->app['request'];
+
+        if (0 === strpos($url, '/')) {
+            // 直接作为路由地址解析
+            $url = substr($url, 1);
+        } elseif (false !== strpos($url, '\\')) {
+            // 解析到类
+            $url = ltrim(str_replace('\\', '/', $url), '/');
+        } elseif (0 === strpos($url, '@')) {
+            // 解析到控制器
+            $url = substr($url, 1);
+        } else {
+            // 解析到 模块/控制器/操作
+            $module     = $request->module();
+            $module     = null !== $this->app->config('module.' . $module) ? $this->app->config('module.' . $module) : $module;
             $module     = $module ? $module . '/' : '';
             $controller = $request->controller();
 
