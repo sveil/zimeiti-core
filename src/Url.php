@@ -466,12 +466,17 @@ class Url
             $url = ltrim(str_replace('\\', '/', $url), '/');
         } elseif (0 === strpos($url, '@')) {
             // 解析到控制器
-            $url = substr($url, 1);
+            $url     = substr($url, 1);
+            $path    = explode('/', $url);
+            $path[0] = null !== $this->app->config('module.' . $path[0])
+            ? $this->app->config('module.' . $path[0])
+            : $path[0];
+            $url = implode("/", $path);
         } else {
             // 解析到 模块/控制器/操作
-            $module     = $request->module();
-            $module     = null !== $this->app->config('module.' . $module) ? $this->app->config('module.' . $module) : $module;
-            $module     = $module ? $module . '/' : '';
+            $module = null !== $this->app->config('module.' . $request->module())
+            ? $this->app->config('module.' . $request->module())
+            : $request->module();
             $controller = $request->controller();
 
             if ('' == $url) {
@@ -480,7 +485,6 @@ class Url
                 $path       = explode('/', $url);
                 $action     = array_pop($path);
                 $controller = empty($path) ? $controller : array_pop($path);
-                $module     = empty($path) ? $module : array_pop($path) . '/';
             }
 
             if ($this->config['url_convert']) {
@@ -488,7 +492,7 @@ class Url
                 $controller = Loader::parseName($controller);
             }
 
-            $url = $module . $controller . '/' . $action;
+            $url = $module . '/' . $controller . '/' . $action;
         }
 
         return $url;
