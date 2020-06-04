@@ -466,12 +466,14 @@ class Url
             $url = ltrim(str_replace('\\', '/', $url), '/');
         } elseif (0 === strpos($url, '@')) {
             // 解析到控制器
-            $url     = substr($url, 1);
-            $path    = explode('/', $url);
-            $path[0] = null !== $this->app->config('module.' . $path[0])
-            ? $this->app->config('module.' . $path[0])
-            : $path[0];
-            $url = implode("/", $path);
+            $url  = substr($url, 1);
+            $path = explode('/', $url);
+            if ('' !== $path[0]) {
+                $path[0] = null !== $this->app->config('module.' . $path[0])
+                ? $this->app->config('module.' . $path[0])
+                : $path[0];
+                $url = implode("/", $path);
+            }
         } else {
             // 解析到 模块/控制器/操作
             $module = null !== $this->app->config('module.' . $request->module())
