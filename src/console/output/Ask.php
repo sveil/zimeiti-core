@@ -61,12 +61,12 @@ class Ask
     protected function doAsk()
     {
         $this->writePrompt();
-
         $inputStream  = STDIN;
         $autocomplete = $this->question->getAutocompleterValues();
 
         if (null === $autocomplete || !$this->hasSttyAvailable()) {
             $ret = false;
+
             if ($this->question->isHidden()) {
                 try {
                     $ret = trim($this->getHiddenResponse($inputStream));
@@ -79,9 +79,11 @@ class Ask
 
             if (false === $ret) {
                 $ret = fgets($inputStream, 4096);
+
                 if (false === $ret) {
                     throw new \RuntimeException('Aborted');
                 }
+
                 $ret = trim($ret);
             }
         } else {
@@ -101,13 +103,11 @@ class Ask
     {
         $autocomplete = $this->question->getAutocompleterValues();
         $ret          = '';
-
-        $i          = 0;
-        $ofs        = -1;
-        $matches    = $autocomplete;
-        $numMatches = count($matches);
-
-        $sttyMode = shell_exec('stty -g');
+        $i            = 0;
+        $ofs          = -1;
+        $matches      = $autocomplete;
+        $numMatches   = count($matches);
+        $sttyMode     = shell_exec('stty -g');
 
         shell_exec('stty -icanon -echo');
 
@@ -165,7 +165,6 @@ class Ask
                 $this->output->write($c);
                 $ret .= $c;
                 ++$i;
-
                 $numMatches = 0;
                 $ofs        = 0;
 
@@ -193,8 +192,7 @@ class Ask
     protected function getHiddenResponse($inputStream)
     {
         if ('\\' === DIRECTORY_SEPARATOR) {
-            $exe = __DIR__ . '/../bin/hiddeninput.exe';
-
+            $exe   = dirname(dirname(dirname(dirname(__DIR__)))) . '/bin/hiddeninput.exe';
             $value = rtrim(shell_exec($exe));
             $this->output->writeln('');
 
@@ -207,7 +205,6 @@ class Ask
 
         if ($this->hasSttyAvailable()) {
             $sttyMode = shell_exec('stty -g');
-
             shell_exec('stty -echo');
             $value = fgets($inputStream, 4096);
             shell_exec(sprintf('stty %s', $sttyMode));
@@ -239,6 +236,7 @@ class Ask
         /** @var \Exception $error */
         $error    = null;
         $attempts = $this->question->getMaxAttempts();
+
         while (null === $attempts || $attempts--) {
             if (null !== $error) {
                 $this->output->error($error->getMessage());
@@ -247,6 +245,7 @@ class Ask
             try {
                 return call_user_func($this->question->getValidator(), $interviewer());
             } catch (\Exception $error) {
+                //
             }
         }
 
@@ -264,14 +263,10 @@ class Ask
         switch (true) {
             case null === $default:
                 $text = sprintf(' <info>%s</info>:', $text);
-
                 break;
-
             case $this->question instanceof Confirmation:
                 $text = sprintf(' <info>%s (yes/no)</info> [<comment>%s</comment>]:', $text, $default ? 'yes' : 'no');
-
                 break;
-
             case $this->question instanceof Choice && $this->question->isMultiselect():
                 $choices = $this->question->getChoices();
                 $default = explode(',', $default);
@@ -281,15 +276,11 @@ class Ask
                 }
 
                 $text = sprintf(' <info>%s</info> [<comment>%s</comment>]:', $text, implode(', ', $default));
-
                 break;
-
             case $this->question instanceof Choice:
                 $choices = $this->question->getChoices();
                 $text    = sprintf(' <info>%s</info> [<comment>%s</comment>]:', $text, $choices[$default]);
-
                 break;
-
             default:
                 $text = sprintf(' <info>%s</info> [<comment>%s</comment>]:', $text, $default);
         }
@@ -317,6 +308,7 @@ class Ask
 
         if (file_exists('/usr/bin/env')) {
             $test = "/usr/bin/env %s -c 'echo OK' 2> /dev/null";
+
             foreach (['bash', 'zsh', 'ksh', 'csh'] as $sh) {
                 if ('OK' === rtrim(shell_exec(sprintf($test, $sh)))) {
                     self::$shell = $sh;
