@@ -123,7 +123,7 @@ class Handle
         $status   = $e->getStatusCode();
         $template = Container::get()->config('http_exception_template');
 
-        if (!Container::get()->isDebug() && !empty($template[$status])) {
+        if (!empty($template[$status])) {
             return Response::create($template[$status], 'view', $status)->assign(['e' => $e]);
         } else {
             return $this->convertExceptionToResponse($e);
