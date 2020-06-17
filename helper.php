@@ -507,9 +507,9 @@ if (!function_exists('queue')) {
     function queue($job, $data = '', $delay = 0, $queue = null)
     {
         if ($delay > 0) {
-            \think\Queue::later($delay, $job, $data, $queue);
+            Queue::later($delay, $job, $data, $queue);
         } else {
-            \think\Queue::push($job, $data, $queue);
+            Queue::push($job, $data, $queue);
         }
     }
 }
