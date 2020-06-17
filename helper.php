@@ -30,6 +30,7 @@ use sveil\facade\Request;
 use sveil\facade\Route;
 use sveil\facade\Session;
 use sveil\facade\Url;
+use sveil\Queue;
 use sveil\Response;
 use sveil\route\RuleItem;
 
@@ -491,6 +492,24 @@ if (!function_exists('parse_name')) {
             return $ucfirst ? ucfirst($name) : lcfirst($name);
         } else {
             return strtolower(trim(preg_replace("/[A-Z]/", "_\\0", $name), "_"));
+        }
+    }
+}
+
+if (!function_exists('queue')) {
+    /**
+     * 添加到队列
+     * @param        $job
+     * @param string $data
+     * @param int    $delay
+     * @param null   $queue
+     */
+    function queue($job, $data = '', $delay = 0, $queue = null)
+    {
+        if ($delay > 0) {
+            \think\Queue::later($delay, $job, $data, $queue);
+        } else {
+            \think\Queue::push($job, $data, $queue);
         }
     }
 }

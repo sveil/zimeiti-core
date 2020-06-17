@@ -14,7 +14,6 @@ namespace sveil\console\input;
 
 class Option
 {
-
     const VALUE_NONE     = 1;
     const VALUE_REQUIRED = 2;
     const VALUE_OPTIONAL = 4;

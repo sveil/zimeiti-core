@@ -55,8 +55,7 @@ class RouteList extends Command
     {
         Container::get('route')->setTestMode(true);
         // 路由检测
-        $path = Container::get()->getRoutePath();
-
+        $path  = Container::get()->getRoutePath();
         $files = is_dir($path) ? scandir($path) : [];
 
         foreach ($files as $file) {
@@ -86,7 +85,6 @@ class RouteList extends Command
         }
 
         $table->setHeader($header);
-
         $routeList = Container::get('route')->getRuleList();
         $rows      = [];
 
@@ -128,5 +126,4 @@ class RouteList extends Command
 
         return $this->table($table);
     }
-
 }
