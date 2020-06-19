@@ -16,6 +16,11 @@ use sveil\exception\HttpException;
 use sveil\Loader;
 use sveil\route\Dispatch;
 
+/**
+ * Class Url
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route\dispatch
+ */
 class Url extends Dispatch
 {
     public function init()
@@ -166,5 +171,4 @@ class Url extends Dispatch
 
         return $controller;
     }
-
 }

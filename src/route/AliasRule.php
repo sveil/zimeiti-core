@@ -14,6 +14,11 @@ namespace sveil\route;
 
 use sveil\Route;
 
+/**
+ * Class AliasRule
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route
+ */
 class AliasRule extends Domain
 {
     /**
@@ -116,5 +121,4 @@ class AliasRule extends Domain
     {
         return $this->option('except', $action);
     }
-
 }

@@ -19,6 +19,11 @@ use sveil\route\dispatch\Callback as CallbackDispatch;
 use sveil\route\dispatch\Controller as ControllerDispatch;
 use sveil\route\dispatch\Module as ModuleDispatch;
 
+/**
+ * Class Domain
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route
+ */
 class Domain extends RuleGroup
 {
     /**
@@ -233,5 +238,4 @@ class Domain extends RuleGroup
 
         return new ModuleDispatch($request, $this, $controller . '/' . $action, $param);
     }
-
 }

@@ -17,10 +17,12 @@ use sveil\db\Query;
 
 /**
  * Sqlite数据库驱动
+ * Class Sqlite
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db\builder
  */
 class Sqlite extends Builder
 {
-
     /**
      * limit
      * @access public

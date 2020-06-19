@@ -14,6 +14,11 @@ namespace sveil\route\dispatch;
 
 use sveil\route\Dispatch;
 
+/**
+ * Class Callback
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route\dispatch
+ */
 class Callback extends Dispatch
 {
     public function exec()
@@ -23,5 +28,4 @@ class Callback extends Dispatch
 
         return $this->app->invoke($this->dispatch, $vars);
     }
-
 }

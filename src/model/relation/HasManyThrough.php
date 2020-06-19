@@ -18,6 +18,11 @@ use sveil\Loader;
 use sveil\Model;
 use sveil\model\Relation;
 
+/**
+ * Class HasManyThrough
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\relation
+ */
 class HasManyThrough extends Relation
 {
     // 中间关联表外键
@@ -360,5 +365,4 @@ class HasManyThrough extends Relation
             $this->baseQuery = true;
         }
     }
-
 }

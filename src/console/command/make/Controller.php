@@ -16,6 +16,11 @@ use sveil\console\command\Make;
 use sveil\console\input\Option;
 use sveil\facade\Config;
 
+/**
+ * Class Controller
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command\make
+ */
 class Controller extends Make
 {
     protected $type = "Controller";
@@ -53,5 +58,4 @@ class Controller extends Make
     {
         return parent::getNamespace($appNamespace, $module) . '\controller';
     }
-
 }

@@ -16,9 +16,8 @@ use sveil\cache\Driver;
 
 /**
  * Class Cache
- *
+ * @author Richard <richard@sveil.com>
  * @package sveil
- *
  * @mixin Driver
  * @mixin \sveil\cache\driver\File
  */
@@ -130,5 +129,4 @@ class Cache
     {
         return call_user_func_array([$this->init(), $method], $args);
     }
-
 }

@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Env
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Env
  * @mixin \sveil\Env
  * @method void load(string $file) static 读取环境变量定义文件

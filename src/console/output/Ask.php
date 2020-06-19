@@ -17,6 +17,11 @@ use sveil\console\Output;
 use sveil\console\output\question\Choice;
 use sveil\console\output\question\Confirmation;
 
+/**
+ * Class Ask
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\output
+ */
 class Ask
 {
     private static $stty;

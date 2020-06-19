@@ -12,9 +12,13 @@
 
 namespace sveil\console\input;
 
+/**
+ * Class Argument
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\input
+ */
 class Argument
 {
-
     const REQUIRED = 1;
     const OPTIONAL = 2;
     const IS_ARRAY = 4;

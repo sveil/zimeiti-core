@@ -25,6 +25,8 @@ use ReflectionMethod;
 use sveil\exception\ClassNotFoundException;
 
 /**
+ * Class Container
+ * @author Richard <richard@sveil.com>
  * @package sveil
  * @property Build          $build
  * @property Cache          $cache

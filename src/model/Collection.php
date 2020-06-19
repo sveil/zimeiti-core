@@ -15,6 +15,11 @@ namespace sveil\model;
 use sveil\Collection as BaseCollection;
 use sveil\Model;
 
+/**
+ * Class Collection
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model
+ */
 class Collection extends BaseCollection
 {
     /**

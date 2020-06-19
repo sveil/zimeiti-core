@@ -15,6 +15,11 @@ namespace sveil;
 use sveil\controller\Jump;
 use sveil\exception\ValidateException;
 
+/**
+ * Class Controller
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Controller
 {
     use Jump;

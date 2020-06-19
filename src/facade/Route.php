@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Route
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Route
  * @mixin \sveil\Route
  * @method \sveil\route\Domain domain(mixed $name, mixed $rule = '', array $option = [], array $pattern = []) static 注册域名路由

@@ -16,7 +16,9 @@ use sveil\cache\Driver;
 
 /**
  * Xcache缓存驱动
- * @author    liu21st <liu21st@gmail.com>
+ * Class Xcache
+ * @author Richard <richard@sveil.com>
+ * @package sveil\cache\driver
  */
 class Xcache extends Driver
 {

@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class View
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\View
  * @mixin \sveil\View
  * @method \sveil\View init(mixed $engine = [], array $replace = []) static 初始化

@@ -18,6 +18,9 @@ use sveil\db\Query;
 
 /**
  * Sqlsrv数据库驱动
+ * Class Sqlsrv
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db\connector
  */
 class Sqlsrv extends Connection
 {

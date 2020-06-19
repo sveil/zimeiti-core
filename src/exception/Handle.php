@@ -17,6 +17,11 @@ use sveil\console\Output;
 use sveil\Container;
 use sveil\Response;
 
+/**
+ * Class Handle
+ * @author Richard <richard@sveil.com>
+ * @package sveil\exception
+ */
 class Handle
 {
     protected $render;

@@ -14,9 +14,13 @@ namespace sveil\process\exception;
 
 use sveil\Process;
 
+/**
+ * Class Timeout
+ * @author Richard <richard@sveil.com>
+ * @package sveil\process\exception
+ */
 class Timeout extends \RuntimeException
 {
-
     const TYPE_GENERAL = 1;
     const TYPE_IDLE    = 2;
 

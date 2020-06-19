@@ -16,6 +16,11 @@ use sveil\Collection;
 use sveil\Model;
 use sveil\Response;
 
+/**
+ * Class Xml
+ * @author Richard <richard@sveil.com>
+ * @package sveil\response
+ */
 class Xml extends Response
 {
     // 输出参数

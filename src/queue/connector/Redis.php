@@ -17,6 +17,11 @@ use sveil\helper\Str;
 use sveil\queue\Connector;
 use sveil\queue\job\Redis as RedisJob;
 
+/**
+ * Class Redis
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue\connector
+ */
 class Redis extends Connector
 {
     /** @var  \Redis */

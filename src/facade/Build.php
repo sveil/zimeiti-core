@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Build
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Build
  * @mixin \sveil\Build
  * @method void run(array $build = [], string $namespace = 'apps', bool $suffix = false) static 根据传入的build资料创建目录和文件

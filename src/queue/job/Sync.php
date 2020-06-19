@@ -14,6 +14,11 @@ namespace sveil\queue\job;
 
 use sveil\queue\Job;
 
+/**
+ * Class Sync
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue\job
+ */
 class Sync extends Job
 {
     /**

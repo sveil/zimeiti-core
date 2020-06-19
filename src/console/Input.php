@@ -16,9 +16,13 @@ use sveil\console\input\Argument;
 use sveil\console\input\Definition;
 use sveil\console\input\Option;
 
+/**
+ * Class Input
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console
+ */
 class Input
 {
-
     /**
      * @var Definition
      */

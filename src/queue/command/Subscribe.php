@@ -20,6 +20,11 @@ use sveil\console\Output;
 use sveil\facade\Url;
 use sveil\Queue;
 
+/**
+ * Class Subscribe
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue\command
+ */
 class Subscribe extends Command
 {
     public function configure()

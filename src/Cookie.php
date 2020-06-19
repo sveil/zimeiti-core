@@ -12,6 +12,11 @@
 
 namespace sveil;
 
+/**
+ * Class Cookie
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Cookie
 {
     /**
@@ -265,5 +270,4 @@ class Cookie
             $val = 'decode' == $type ? urldecode($val) : urlencode($val);
         }
     }
-
 }

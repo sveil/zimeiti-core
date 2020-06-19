@@ -12,6 +12,11 @@
 
 namespace sveil;
 
+/**
+ * Class Log
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Log implements LoggerInterface
 {
     const EMERGENCY = 'emergency';

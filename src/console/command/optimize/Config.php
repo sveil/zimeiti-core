@@ -19,6 +19,11 @@ use sveil\console\Output;
 use sveil\Container;
 use sveil\facade\App;
 
+/**
+ * Class Config
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command\optimize
+ */
 class Config extends Command
 {
     protected function configure()

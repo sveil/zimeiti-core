@@ -14,9 +14,13 @@ namespace sveil\process\exception;
 
 use sveil\Process;
 
+/**
+ * Class Faild
+ * @author Richard <richard@sveil.com>
+ * @package sveil\process\exception
+ */
 class Faild extends \RuntimeException
 {
-
     private $process;
 
     public function __construct(Process $process)

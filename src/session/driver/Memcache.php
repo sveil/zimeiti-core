@@ -15,6 +15,11 @@ namespace sveil\session\driver;
 use SessionHandlerInterface;
 use sveil\Exception;
 
+/**
+ * Class Memcache
+ * @author Richard <richard@sveil.com>
+ * @package sveil\session\driver
+ */
 class Memcache implements SessionHandlerInterface
 {
     protected $handler = null;

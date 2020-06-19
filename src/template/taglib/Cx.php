@@ -16,10 +16,11 @@ use sveil\template\TagLib;
 
 /**
  * CX标签库解析类
+ * Class Cx
  * @category   Sveil
- * @package  Sveil
  * @subpackage  Driver.Taglib
- * @author    liu21st <liu21st@gmail.com>
+ * @author Richard <richard@sveil.com>
+ * @package sveil\template\driver
  */
 class Cx extends Taglib
 {

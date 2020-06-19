@@ -14,9 +14,13 @@ namespace sveil\response;
 
 use sveil\Response;
 
+/**
+ * Class Redirect
+ * @author Richard <richard@sveil.com>
+ * @package sveil\response
+ */
 class Redirect extends Response
 {
-
     protected $options = [];
 
     // URL参数

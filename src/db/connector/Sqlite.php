@@ -17,10 +17,12 @@ use sveil\db\Connection;
 
 /**
  * Sqlite数据库驱动
+ * Class Sqlite
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db\connector
  */
 class Sqlite extends Connection
 {
-
     protected $builder = '\\sveil\\db\\builder\\Sqlite';
 
     /**

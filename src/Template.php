@@ -18,10 +18,14 @@ use sveil\exception\TemplateNotFoundException;
  * SveilPHP分离出来的模板引擎
  * 支持XML标签和普通标签的模板解析
  * 编译型模板引擎 支持动态缓存
+ * Class Template
+ * @author Richard <richard@sveil.com>
+ * @package sveil
  */
 class Template
 {
     protected $app;
+
     /**
      * 模板变量
      * @var array

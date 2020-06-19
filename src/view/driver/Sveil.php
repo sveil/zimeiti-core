@@ -17,10 +17,16 @@ use sveil\exception\TemplateNotFoundException;
 use sveil\Loader;
 use sveil\Template;
 
+/**
+ * Class Sveil
+ * @author Richard <richard@sveil.com>
+ * @package sveil\view\driver
+ */
 class Sveil
 {
     // 模板引擎实例
     private $template;
+
     private $app;
 
     // 模板引擎参数

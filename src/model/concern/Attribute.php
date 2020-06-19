@@ -18,6 +18,11 @@ use sveil\Exception;
 use sveil\Loader;
 use sveil\model\Relation;
 
+/**
+ * Trait Attribute
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\concern
+ */
 trait Attribute
 {
     /**

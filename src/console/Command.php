@@ -17,9 +17,13 @@ use sveil\console\input\Argument;
 use sveil\console\input\Definition;
 use sveil\console\input\Option;
 
+/**
+ * Class Command
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console
+ */
 class Command
 {
-
     /** @var  Console */
     private $console;
     private $name;

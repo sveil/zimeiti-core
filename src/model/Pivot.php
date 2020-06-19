@@ -14,6 +14,11 @@ namespace sveil\model;
 
 use sveil\Model;
 
+/**
+ * Class Pivot
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model
+ */
 class Pivot extends Model
 {
 

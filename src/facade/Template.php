@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Template
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Template
  * @mixin \sveil\Template
  * @method void assign(mixed $name, mixed $value = '') static 模板变量赋值

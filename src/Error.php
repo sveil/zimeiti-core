@@ -17,6 +17,11 @@ use sveil\exception\ErrorException;
 use sveil\exception\Handle;
 use sveil\exception\ThrowableError;
 
+/**
+ * Class Error
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Error
 {
     /**

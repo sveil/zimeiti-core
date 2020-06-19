@@ -18,8 +18,8 @@ use sveil\queue\Connector;
 
 /**
  * Class Queue
+ * @author Richard <richard@sveil.com>
  * @package sveil
- *
  * @method static push($job, $data = '', $queue = null)
  * @method static later($delay, $job, $data = '', $queue = null)
  * @method static pop($queue = null)

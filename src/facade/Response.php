@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Response
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Response
  * @mixin \sveil\Response
  * @method \sveil\response create(mixed $data = '', string $type = '', int $code = 200, array $header = [], array $options = []) static 创建Response对象

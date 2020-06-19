@@ -14,6 +14,11 @@ namespace sveil\db;
 
 use ArrayAccess;
 
+/**
+ * Class Where
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db
+ */
 class Where implements ArrayAccess
 {
     /**
@@ -175,5 +180,4 @@ class Where implements ArrayAccess
     {
         return $this->__get($name);
     }
-
 }

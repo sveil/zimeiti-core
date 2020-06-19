@@ -15,6 +15,11 @@ namespace sveil\route\dispatch;
 use sveil\Response;
 use sveil\route\Dispatch;
 
+/**
+ * Class Redirect
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route\dispatch
+ */
 class Redirect extends Dispatch
 {
     public function exec()

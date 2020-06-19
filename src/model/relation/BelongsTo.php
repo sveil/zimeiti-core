@@ -16,6 +16,11 @@ use Closure;
 use sveil\Loader;
 use sveil\Model;
 
+/**
+ * Class BelongsTo
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\relation
+ */
 class BelongsTo extends OneToOne
 {
     /**

@@ -14,6 +14,11 @@ namespace sveil\response;
 
 use sveil\Response;
 
+/**
+ * Class Json
+ * @author Richard <richard@sveil.com>
+ * @package sveil\response
+ */
 class Json extends Response
 {
     // 输出参数
@@ -48,5 +53,4 @@ class Json extends Response
             throw $e;
         }
     }
-
 }

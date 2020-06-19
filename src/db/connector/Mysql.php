@@ -18,10 +18,12 @@ use sveil\db\Query;
 
 /**
  * mysql数据库驱动
+ * Class Mysql
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db\connector
  */
 class Mysql extends Connection
 {
-
     protected $builder = '\\sveil\\db\\builder\\Mysql';
 
     /**

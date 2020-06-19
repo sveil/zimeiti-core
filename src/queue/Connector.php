@@ -14,6 +14,11 @@ namespace sveil\queue;
 
 use InvalidArgumentException;
 
+/**
+ * Abstract Class Connector
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue
+ */
 abstract class Connector
 {
     protected $options = [];

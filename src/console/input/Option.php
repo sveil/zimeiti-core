@@ -12,6 +12,11 @@
 
 namespace sveil\console\input;
 
+/**
+ * Class Option
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\input
+ */
 class Option
 {
     const VALUE_NONE     = 1;

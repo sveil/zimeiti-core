@@ -17,9 +17,13 @@ use sveil\queue\Connector;
 use sveil\queue\job\Sync as SyncJob;
 use Throwable;
 
+/**
+ * Class Sync
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue\connector
+ */
 class Sync extends Connector
 {
-
     public function push($job, $data = '', $queue = null)
     {
         $queueJob = $this->resolveJob($this->createPayload($job, $data, $queue));

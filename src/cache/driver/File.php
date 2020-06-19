@@ -17,7 +17,9 @@ use sveil\Container;
 
 /**
  * 文件类型缓存类
- * @author    liu21st <liu21st@gmail.com>
+ * Class File
+ * @author Richard <richard@sveil.com>
+ * @package sveil\cache\driver
  */
 class File extends Driver
 {
@@ -304,5 +306,4 @@ class File extends Driver
     {
         return is_file($path) && unlink($path);
     }
-
 }

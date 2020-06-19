@@ -15,6 +15,11 @@ namespace sveil\response;
 use sveil\Exception;
 use sveil\Response;
 
+/**
+ * Class Download
+ * @author Richard <richard@sveil.com>
+ * @package sveil\response
+ */
 class Download extends Response
 {
     protected $expire = 360;

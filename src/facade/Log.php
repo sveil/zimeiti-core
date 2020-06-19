@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Log
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Log
  * @mixin \sveil\Log
  * @method \sveil\Log init(array $config = []) static 日志初始化

@@ -16,6 +16,11 @@ use ArrayAccess;
 use InvalidArgumentException;
 use sveil\Collection;
 
+/**
+ * Class Arr
+ * @author Richard <richard@sveil.com>
+ * @package sveil\helper
+ */
 class Arr
 {
     /**

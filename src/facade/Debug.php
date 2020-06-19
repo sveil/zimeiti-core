@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Debug
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Debug
  * @mixin \sveil\Debug
  * @method void remark(string $name, mixed $value = '') static 记录时间（微秒）和内存使用情况

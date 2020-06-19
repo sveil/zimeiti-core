@@ -16,6 +16,9 @@ use sveil\App;
 
 /**
  * 本地化调试输出到文件
+ * Class File
+ * @author Richard <richard@sveil.com>
+ * @package sveil\log\driver
  */
 class File
 {

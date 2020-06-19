@@ -19,6 +19,11 @@ use IteratorAggregate;
 use JsonSerializable;
 use Traversable;
 
+/**
+ * Abstract Class Paginator
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
 {
     /**
@@ -442,5 +447,4 @@ abstract class Paginator implements ArrayAccess, Countable, IteratorAggregate, J
 
         return $result;
     }
-
 }

@@ -12,9 +12,13 @@
 
 namespace sveil\queue;
 
+/**
+ * Trait Queueable
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue
+ */
 trait Queueable
 {
-
     /** @var string 队列名称 */
     public $queue;
 

@@ -19,6 +19,11 @@ use sveil\Loader;
 use sveil\Model;
 use sveil\model\Relation;
 
+/**
+ * Class MorphOne
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\relation
+ */
 class MorphOne extends Relation
 {
     // 多态字段
@@ -254,5 +259,4 @@ class MorphOne extends Relation
             $this->baseQuery = true;
         }
     }
-
 }

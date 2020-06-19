@@ -16,6 +16,9 @@ use sveil\Exception;
 
 /**
  * Database相关异常处理类
+ * Class DbException
+ * @author Richard <richard@sveil.com>
+ * @package sveil\exception
  */
 class DbException extends Exception
 {
@@ -41,5 +44,4 @@ class DbException extends Exception
         unset($config['username'], $config['password']);
         $this->setData('Database Config', $config);
     }
-
 }

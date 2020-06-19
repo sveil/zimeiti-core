@@ -16,6 +16,7 @@ use sveil\db\Connection;
 
 /**
  * Class Db
+ * @author Richard <richard@sveil.com>
  * @package sveil
  * @method \sveil\db\Query master() static 从主服务器读取数据
  * @method \sveil\db\Query readMaster(bool $all = false) static 后续从主服务器读取数据

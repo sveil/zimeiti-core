@@ -14,6 +14,7 @@ namespace sveil\validate;
 
 /**
  * Class ValidateRule
+ * @author Richard <richard@sveil.com>
  * @package sveil\validate
  * @method ValidateRule confirm(mixed $rule, string $msg = '') static 验证是否和某个字段的值一致
  * @method ValidateRule different(mixed $rule, string $msg = '') static 验证是否和某个字段的值是否不同

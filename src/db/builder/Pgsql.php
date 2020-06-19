@@ -17,10 +17,12 @@ use sveil\db\Query;
 
 /**
  * Pgsql数据库驱动
+ * Class Pgsql
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db\builder
  */
 class Pgsql extends Builder
 {
-
     protected $insertSql    = 'INSERT INTO %TABLE% (%FIELD%) VALUES (%DATA%) %COMMENT%';
     protected $insertAllSql = 'INSERT INTO %TABLE% (%FIELD%) %DATA% %COMMENT%';
 
@@ -101,5 +103,4 @@ class Pgsql extends Builder
     {
         return 'RANDOM()';
     }
-
 }

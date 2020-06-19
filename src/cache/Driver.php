@@ -16,6 +16,9 @@ use sveil\Container;
 
 /**
  * 缓存基础类
+ * Abstract Class Driver
+ * @author Richard <richard@sveil.com>
+ * @package sveil\cache\driver
  */
 abstract class Driver
 {

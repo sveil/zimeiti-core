@@ -16,6 +16,11 @@ use sveil\Db;
 use sveil\queue\Connector;
 use sveil\queue\job\Database as DatabaseJob;
 
+/**
+ * Class Database
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue\connector
+ */
 class Database extends Connector
 {
     protected $options = [

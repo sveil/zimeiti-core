@@ -14,6 +14,11 @@ namespace sveil\console\command\make;
 
 use sveil\console\command\Make;
 
+/**
+ * Class Middleware
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command\make
+ */
 class Middleware extends Make
 {
     protected $type = "Middleware";

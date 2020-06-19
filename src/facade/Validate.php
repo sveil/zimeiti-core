@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Validate
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Validate
  * @mixin \sveil\Validate
  * @method \sveil\Validate make(array $rules = [], array $message = [], array $field = []) static 创建一个验证器类
@@ -72,5 +75,4 @@ class Validate extends Facade
     {
         return 'validate';
     }
-
 }

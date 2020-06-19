@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Hook
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Hook
  * @mixin \sveil\Hook
  * @method \sveil\Hook alias(mixed $name, mixed $behavior = null) static 指定行为标识

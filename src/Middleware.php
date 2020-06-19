@@ -16,6 +16,11 @@ use InvalidArgumentException;
 use LogicException;
 use sveil\exception\HttpResponseException;
 
+/**
+ * Class Middleware
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Middleware
 {
     protected $queue = [];

@@ -20,6 +20,11 @@ use sveil\facade\App;
 use sveil\facade\Config;
 use sveil\facade\Env;
 
+/**
+ * Abstract Class Make
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command
+ */
 abstract class Make extends Command
 {
     protected $type;
@@ -107,5 +112,4 @@ abstract class Make extends Command
     {
         return $module ? ($appNamespace . '\\' . $module) : $appNamespace;
     }
-
 }

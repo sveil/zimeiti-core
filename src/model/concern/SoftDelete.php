@@ -16,10 +16,12 @@ use sveil\db\Query;
 
 /**
  * 数据软删除
+ * Trait SoftDelete
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\concern
  */
 trait SoftDelete
 {
-
     /**
      * 是否包含软删除数据
      * @var bool

@@ -12,6 +12,11 @@
 
 namespace sveil;
 
+/**
+ * Class Facade
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Facade
 {
     /**

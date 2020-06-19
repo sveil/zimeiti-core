@@ -14,6 +14,11 @@ namespace sveil\cache\driver;
 
 use sveil\cache\Driver;
 
+/**
+ * Class Memcached
+ * @author Richard <richard@sveil.com>
+ * @package sveil\cache\driver
+ */
 class Memcached extends Driver
 {
     protected $options = [

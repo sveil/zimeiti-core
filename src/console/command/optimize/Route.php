@@ -17,6 +17,11 @@ use sveil\console\Input;
 use sveil\console\Output;
 use sveil\Container;
 
+/**
+ * Class Route
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command\optimize
+ */
 class Route extends Command
 {
     protected function configure()
@@ -64,5 +69,4 @@ class Route extends Command
         $content .= var_export(Container::get('route')->getName(), true) . ';';
         return $content;
     }
-
 }

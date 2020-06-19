@@ -14,6 +14,11 @@ namespace sveil\console\command\make;
 
 use sveil\console\command\Make;
 
+/**
+ * Class Validate
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command\make
+ */
 class Validate extends Make
 {
     protected $type = "Validate";
@@ -36,5 +41,4 @@ class Validate extends Make
     {
         return parent::getNamespace($appNamespace, $module) . '\validate';
     }
-
 }

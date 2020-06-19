@@ -14,6 +14,11 @@ namespace sveil\db\exception;
 
 use sveil\exception\DbException;
 
+/**
+ * Class DataNotFoundException
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db\exception
+ */
 class DataNotFoundException extends DbException
 {
     protected $table;

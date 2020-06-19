@@ -15,6 +15,11 @@ namespace sveil\db;
 use PDO;
 use sveil\Exception;
 
+/**
+ * Abstract Class Builder
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db
+ */
 abstract class Builder
 {
     // connection对象实例

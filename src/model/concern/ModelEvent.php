@@ -17,6 +17,9 @@ use sveil\Loader;
 
 /**
  * 模型事件处理
+ * Trait ModelEvent
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\concern
  */
 trait ModelEvent
 {

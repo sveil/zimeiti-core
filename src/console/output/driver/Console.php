@@ -15,9 +15,13 @@ namespace sveil\console\output\driver;
 use sveil\console\Output;
 use sveil\console\output\Formatter;
 
+/**
+ * Class Console
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\output\driver
+ */
 class Console
 {
-
     /** @var  Resource */
     private $stdout;
 
@@ -365,5 +369,4 @@ class Console
 
         return function_exists('posix_isatty') && @posix_isatty($stream);
     }
-
 }

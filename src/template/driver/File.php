@@ -14,6 +14,11 @@ namespace sveil\template\driver;
 
 use sveil\Exception;
 
+/**
+ * Class File
+ * @author Richard <richard@sveil.com>
+ * @package sveil\template\driver
+ */
 class File
 {
     protected $cacheFile;

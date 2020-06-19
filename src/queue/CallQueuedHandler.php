@@ -12,6 +12,11 @@
 
 namespace sveil\queue;
 
+/**
+ * Class CallQueuedHandler
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue
+ */
 class CallQueuedHandler
 {
     public function call(Job $job, array $data)

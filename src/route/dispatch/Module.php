@@ -19,6 +19,11 @@ use sveil\Loader;
 use sveil\Request;
 use sveil\route\Dispatch;
 
+/**
+ * Class Module
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route\dispatch
+ */
 class Module extends Dispatch
 {
     protected $controller;

@@ -14,6 +14,11 @@ namespace sveil;
 
 use Yaconf;
 
+/**
+ * Class Config
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Config implements \ArrayAccess
 {
     /**

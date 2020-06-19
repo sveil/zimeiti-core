@@ -12,6 +12,11 @@
 
 namespace sveil\exception;
 
+/**
+ * Class ValidateException
+ * @author Richard <richard@sveil.com>
+ * @package sveil\exception
+ */
 class ValidateException extends \RuntimeException
 {
     protected $error;

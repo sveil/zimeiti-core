@@ -15,6 +15,11 @@ namespace sveil\queue;
 use Closure;
 use sveil\Process;
 
+/**
+ * Class Listener
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue
+ */
 class Listener
 {
     /**

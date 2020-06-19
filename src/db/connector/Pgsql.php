@@ -17,6 +17,9 @@ use sveil\db\Connection;
 
 /**
  * Pgsql数据库驱动
+ * Class Pgsql
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db\connector
  */
 class Pgsql extends Connection
 {

@@ -14,6 +14,11 @@ namespace sveil;
 
 use sveil\exception\ClassNotFoundException;
 
+/**
+ * Class Session
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Session
 {
     /**

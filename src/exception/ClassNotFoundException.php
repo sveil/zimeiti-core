@@ -12,6 +12,11 @@
 
 namespace sveil\exception;
 
+/**
+ * Class ClassNotFoundException
+ * @author Richard <richard@sveil.com>
+ * @package sveil\exception
+ */
 class ClassNotFoundException extends \RuntimeException
 {
     protected $class;

@@ -15,8 +15,9 @@ namespace sveil\log\driver;
 use sveil\App;
 
 /**
- * github: https://github.com/luofei614/SocketLog
- * @author luofei614<weibo.com/luofei614>
+ * Class Socket
+ * @author Richard <richard@sveil.com>
+ * @package sveil\log\driver
  */
 class Socket
 {

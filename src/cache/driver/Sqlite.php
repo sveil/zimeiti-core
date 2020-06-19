@@ -16,7 +16,9 @@ use sveil\cache\Driver;
 
 /**
  * Sqlite缓存驱动
- * @author    liu21st <liu21st@gmail.com>
+ * Class Sqlite
+ * @author Richard <richard@sveil.com>
+ * @package sveil\cache\driver
  */
 class Sqlite extends Driver
 {

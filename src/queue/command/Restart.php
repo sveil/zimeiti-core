@@ -17,6 +17,11 @@ use sveil\console\Input;
 use sveil\console\Output;
 use sveil\facade\Cache;
 
+/**
+ * Class Restart
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue\command
+ */
 class Restart extends Command
 {
     public function configure()

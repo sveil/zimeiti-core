@@ -15,9 +15,13 @@ namespace sveil\console\output\descriptor;
 use sveil\Console as SveilConsole;
 use sveil\console\Command;
 
+/**
+ * Class Console
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\output\descriptor
+ */
 class Console
 {
-
     const GLOBAL_NAMESPACE = '_global';
 
     /**

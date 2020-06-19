@@ -19,6 +19,9 @@ use sveil\Exception;
 
 /**
  * Sqlsrv数据库驱动
+ * Class Sqlsrv
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db\builder
  */
 class Sqlsrv extends Builder
 {
@@ -156,5 +159,4 @@ class Sqlsrv extends Builder
 
         return parent::selectInsert($query, $fields, $table);
     }
-
 }

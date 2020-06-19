@@ -12,6 +12,11 @@
 
 namespace sveil\config\driver;
 
+/**
+ * Class Ini
+ * @author Richard <richard@sveil.com>
+ * @package sveil\config\driver
+ */
 class Ini
 {
     protected $config;

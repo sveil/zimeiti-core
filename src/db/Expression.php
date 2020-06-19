@@ -12,6 +12,11 @@
 
 namespace sveil\db;
 
+/**
+ * Class Expression
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db
+ */
 class Expression
 {
     /**

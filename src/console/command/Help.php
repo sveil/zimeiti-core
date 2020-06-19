@@ -18,6 +18,11 @@ use sveil\console\input\Argument as InputArgument;
 use sveil\console\input\Option as InputOption;
 use sveil\console\Output;
 
+/**
+ * Class Help
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command
+ */
 class Help extends Command
 {
     private $command;

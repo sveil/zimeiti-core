@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Url
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Url
  * @mixin \sveil\Url
  * @method string build(string $url = '', mixed $vars = '', mixed $suffix = true, mixed $domain = false) static URL生成 支持路由反射

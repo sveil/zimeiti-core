@@ -29,6 +29,11 @@ use sveil\model\Relation;
 use sveil\model\relation\OneToOne;
 use sveil\Paginator;
 
+/**
+ * Class Query
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db
+ */
 class Query
 {
     /**

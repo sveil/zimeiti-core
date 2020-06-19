@@ -12,6 +12,11 @@
 
 namespace sveil\console\output\formatter;
 
+/**
+ * Class Style
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\output\formatter
+ */
 class Style
 {
     private static $availableForegroundColors = [

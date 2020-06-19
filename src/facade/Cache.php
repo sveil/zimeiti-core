@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Cache
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Cache
  * @mixin \sveil\Cache
  * @method \sveil\cache\Driver connect(array $options = [], mixed $name = false) static 连接缓存

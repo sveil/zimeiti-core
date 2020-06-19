@@ -14,6 +14,11 @@ namespace sveil;
 
 use sveil\response\Redirect as RedirectResponse;
 
+/**
+ * Class Response
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Response
 {
     /**

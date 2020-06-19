@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Middleware
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Middleware
  * @mixin \sveil\Middleware
  * @method void import(array $middlewares = []) static 批量设置中间件

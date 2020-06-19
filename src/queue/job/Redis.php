@@ -15,6 +15,11 @@ namespace sveil\queue\job;
 use sveil\queue\connector\Redis as RedisQueue;
 use sveil\queue\Job;
 
+/**
+ * Class Redis
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue\job
+ */
 class Redis extends Job
 {
     /**

@@ -12,6 +12,11 @@
 
 namespace sveil\helper;
 
+/**
+ * Class Str
+ * @author Richard <richard@sveil.com>
+ * @package sveil\helper
+ */
 class Str
 {
     protected static $snakeCache = [];

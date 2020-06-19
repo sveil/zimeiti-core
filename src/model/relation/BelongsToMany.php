@@ -21,6 +21,11 @@ use sveil\Model;
 use sveil\model\Pivot;
 use sveil\model\Relation;
 
+/**
+ * Class BelongsToMany
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\relation
+ */
 class BelongsToMany extends Relation
 {
     // 中间表表名

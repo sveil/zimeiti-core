@@ -17,6 +17,11 @@ use sveil\db\Query;
 use sveil\Loader;
 use sveil\Model;
 
+/**
+ * Class HasOne
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\relation
+ */
 class HasOne extends OneToOne
 {
     /**

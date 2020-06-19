@@ -16,10 +16,11 @@ use sveil\Exception;
 
 /**
  * SveilPHP标签库TagLib解析基类
+ * Class TagLib
  * @category   Sveil
- * @package  Sveil
  * @subpackage  Template
- * @author    liu21st <liu21st@gmail.com>
+ * @author Richard <richard@sveil.com>
+ * @package sveil\template
  */
 class TagLib
 {
@@ -28,7 +29,8 @@ class TagLib
      * @var string
      * @access protected
      */
-    protected $xml  = '';
+    protected $xml = '';
+
     protected $tags = []; // 标签定义
     /**
      * 标签库名称

@@ -14,6 +14,11 @@ namespace sveil\db\exception;
 
 use sveil\exception\DbException;
 
+/**
+ * Class ModelNotFoundException
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db\exception
+ */
 class ModelNotFoundException extends DbException
 {
     protected $model;
@@ -42,5 +47,4 @@ class ModelNotFoundException extends DbException
     {
         return $this->model;
     }
-
 }

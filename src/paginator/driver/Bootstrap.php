@@ -14,9 +14,13 @@ namespace sveil\paginator\driver;
 
 use sveil\Paginator;
 
+/**
+ * Class Bootstrap
+ * @author Richard <richard@sveil.com>
+ * @package sveil\paginator\driver
+ */
 class Bootstrap extends Paginator
 {
-
     /**
      * 上一页按钮
      * @param string $text

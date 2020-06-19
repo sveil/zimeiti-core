@@ -14,6 +14,11 @@ namespace sveil\exception;
 
 use sveil\Response;
 
+/**
+ * Class HttpResponseException
+ * @author Richard <richard@sveil.com>
+ * @package sveil\exception
+ */
 class HttpResponseException extends \RuntimeException
 {
     /**
@@ -30,5 +35,4 @@ class HttpResponseException extends \RuntimeException
     {
         return $this->response;
     }
-
 }

@@ -12,6 +12,11 @@
 
 namespace sveil\console;
 
+/**
+ * Class Table
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console
+ */
 class Table
 {
     const ALIGN_LEFT   = 1;

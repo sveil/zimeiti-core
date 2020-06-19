@@ -14,11 +14,15 @@ namespace sveil\route\dispatch;
 
 use sveil\route\Dispatch;
 
+/**
+ * Class Response
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route\dispatch
+ */
 class Response extends Dispatch
 {
     public function exec()
     {
         return $this->dispatch;
     }
-
 }

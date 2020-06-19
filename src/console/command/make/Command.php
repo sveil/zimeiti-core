@@ -16,6 +16,11 @@ use sveil\console\command\Make;
 use sveil\console\input\Argument;
 use sveil\facade\App;
 
+/**
+ * Class Command
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command\make
+ */
 class Command extends Make
 {
     protected $type = "Command";
@@ -53,5 +58,4 @@ class Command extends Make
     {
         return $appNamespace . '\\command';
     }
-
 }

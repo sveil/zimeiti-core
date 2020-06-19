@@ -14,6 +14,11 @@ namespace sveil;
 
 use SplFileObject;
 
+/**
+ * Class File
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class File extends SplFileObject
 {
     /**

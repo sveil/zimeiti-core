@@ -16,6 +16,11 @@ use sveil\Container;
 use sveil\Exception;
 use sveil\Route;
 
+/**
+ * Class RuleItem
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route
+ */
 class RuleItem extends Rule
 {
     protected $hasSetRule;
@@ -289,5 +294,4 @@ class RuleItem extends Rule
         // 成功匹配后返回URL中的动态变量数组
         return $var;
     }
-
 }

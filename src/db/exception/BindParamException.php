@@ -16,10 +16,12 @@ use sveil\exception\DbException;
 
 /**
  * PDO参数绑定异常
+ * Class BindParamException
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db\exception
  */
 class BindParamException extends DbException
 {
-
     /**
      * BindParamException constructor.
      * @access public

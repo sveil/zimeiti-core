@@ -23,6 +23,11 @@ use sveil\Exception;
 use sveil\exception\PDOException;
 use sveil\Loader;
 
+/**
+ * Abstract Class Connection
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db
+ */
 abstract class Connection
 {
     const PARAM_FLOAT          = 21;
@@ -2149,5 +2154,4 @@ abstract class Connection
             throw new Exception('closure not support cache(true)');
         }
     }
-
 }

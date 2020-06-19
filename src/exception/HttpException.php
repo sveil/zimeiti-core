@@ -12,6 +12,11 @@
 
 namespace sveil\exception;
 
+/**
+ * Class HttpException
+ * @author Richard <richard@sveil.com>
+ * @package sveil\exception
+ */
 class HttpException extends \RuntimeException
 {
     private $statusCode;

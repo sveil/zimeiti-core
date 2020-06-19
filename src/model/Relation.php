@@ -17,9 +17,9 @@ use sveil\Exception;
 use sveil\Model;
 
 /**
- * Class Relation
+ * Abstract Class Relation
+ * @author Richard <richard@sveil.com>
  * @package sveil\model
- *
  * @mixin Query
  */
 abstract class Relation

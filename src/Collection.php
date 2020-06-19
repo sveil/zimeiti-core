@@ -18,6 +18,11 @@ use Countable;
 use IteratorAggregate;
 use JsonSerializable;
 
+/**
+ * Class Collection
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Collection implements ArrayAccess, Countable, IteratorAggregate, JsonSerializable
 {
     /**

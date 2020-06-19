@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class App
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\App
  * @mixin \sveil\App
  * @method \sveil\App bind(string $bind) static 绑定模块或者控制器

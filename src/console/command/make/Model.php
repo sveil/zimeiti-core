@@ -14,6 +14,11 @@ namespace sveil\console\command\make;
 
 use sveil\console\command\Make;
 
+/**
+ * Class Model
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command\make
+ */
 class Model extends Make
 {
     protected $type = "Model";

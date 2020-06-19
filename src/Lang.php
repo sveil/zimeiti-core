@@ -12,6 +12,11 @@
 
 namespace sveil;
 
+/**
+ * Class Lang
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Lang
 {
     /**

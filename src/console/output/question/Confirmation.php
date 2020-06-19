@@ -14,9 +14,13 @@ namespace sveil\console\output\question;
 
 use sveil\console\output\Question;
 
+/**
+ * Class Confirmation
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\output\question
+ */
 class Confirmation extends Question
 {
-
     private $trueAnswerRegex;
 
     /**

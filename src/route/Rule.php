@@ -22,6 +22,11 @@ use sveil\route\dispatch\Redirect as RedirectDispatch;
 use sveil\route\dispatch\Response as ResponseDispatch;
 use sveil\route\dispatch\View as ViewDispatch;
 
+/**
+ * Abstract Class Rule
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route
+ */
 abstract class Rule
 {
     /**

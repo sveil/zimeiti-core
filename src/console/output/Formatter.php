@@ -15,9 +15,13 @@ namespace sveil\console\output;
 use sveil\console\output\formatter\Stack as StyleStack;
 use sveil\console\output\formatter\Style;
 
+/**
+ * Class Formatter
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\output
+ */
 class Formatter
 {
-
     private $decorated = false;
     private $styles    = [];
     private $styleStack;

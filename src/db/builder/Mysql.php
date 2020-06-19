@@ -19,6 +19,9 @@ use sveil\Exception;
 
 /**
  * mysql数据库驱动
+ * Class Mysql
+ * @author Richard <richard@sveil.com>
+ * @package sveil\db\builder
  */
 class Mysql extends Builder
 {

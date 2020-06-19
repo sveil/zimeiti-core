@@ -18,6 +18,11 @@ use sveil\console\input\Option;
 use sveil\console\Output;
 use sveil\queue\Listener;
 
+/**
+ * Class Listen
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue\command
+ */
 class Listen extends Command
 {
     /** @var  Listener */

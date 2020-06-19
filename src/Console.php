@@ -21,9 +21,13 @@ use sveil\console\input\Option as InputOption;
 use sveil\console\Output;
 use sveil\console\output\driver\Buffer;
 
+/**
+ * Class Console
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Console
 {
-
     private $name;
     private $version;
 

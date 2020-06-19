@@ -12,6 +12,11 @@
 
 namespace sveil;
 
+/**
+ * Class Build
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Build
 {
     /**

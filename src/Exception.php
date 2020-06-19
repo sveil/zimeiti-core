@@ -12,9 +12,13 @@
 
 namespace sveil;
 
+/**
+ * Class Exception
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Exception extends \Exception
 {
-
     /**
      * 保存异常页面显示的额外Debug数据
      * @var array
@@ -53,5 +57,4 @@ class Exception extends \Exception
     {
         return $this->data;
     }
-
 }

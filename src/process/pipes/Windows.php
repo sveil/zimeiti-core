@@ -14,9 +14,13 @@ namespace sveil\process\pipes;
 
 use sveil\Process;
 
+/**
+ * Class Windows
+ * @author Richard <richard@sveil.com>
+ * @package sveil\process\pipes
+ */
 class Windows extends Pipes
 {
-
     /** @var array */
     private $files = [];
     /** @var array */

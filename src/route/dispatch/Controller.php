@@ -14,6 +14,11 @@ namespace sveil\route\dispatch;
 
 use sveil\route\Dispatch;
 
+/**
+ * Class Controller
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route\dispatch
+ */
 class Controller extends Dispatch
 {
     public function exec()
@@ -27,5 +32,4 @@ class Controller extends Dispatch
             $this->rule->getConfig('controller_suffix')
         );
     }
-
 }

@@ -19,6 +19,11 @@ use sveil\console\Output;
 use sveil\Db;
 use sveil\facade\App;
 
+/**
+ * Class Schema
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command\optimize
+ */
 class Schema extends Command
 {
     protected function configure()

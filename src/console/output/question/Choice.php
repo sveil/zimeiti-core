@@ -14,6 +14,11 @@ namespace sveil\console\output\question;
 
 use sveil\console\output\Question;
 
+/**
+ * Class Choice
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\output\question
+ */
 class Choice extends Question
 {
     private $choices;

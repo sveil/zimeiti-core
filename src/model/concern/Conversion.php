@@ -20,6 +20,9 @@ use sveil\model\Collection as ModelCollection;
 
 /**
  * 模型数据转换处理
+ * Trait Conversion
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\concern
  */
 trait Conversion
 {
@@ -270,5 +273,4 @@ trait Conversion
 
         return $collection;
     }
-
 }

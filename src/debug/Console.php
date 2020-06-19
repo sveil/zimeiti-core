@@ -18,6 +18,9 @@ use sveil\Response;
 
 /**
  * 浏览器调试输出
+ * Class Console
+ * @author Richard <richard@sveil.com>
+ * @package sveil\debug
  */
 class Console
 {
@@ -153,5 +156,4 @@ JS;
         $line[] = "console.groupEnd();";
         return implode(PHP_EOL, $line);
     }
-
 }

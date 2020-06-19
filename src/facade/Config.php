@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Config
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Config
  * @mixin \sveil\Config
  * @method array load(string $file, string $name = '') static 加载配置文件

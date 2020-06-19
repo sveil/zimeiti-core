@@ -19,9 +19,13 @@ use sveil\process\pipes\Unix as UnixPipes;
 use sveil\process\pipes\Windows as WindowsPipes;
 use sveil\process\Utils;
 
+/**
+ * Class Process
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Process
 {
-
     const ERR = 'err';
     const OUT = 'out';
 
@@ -675,7 +679,7 @@ class Process
      * @param string $line
      */
     public function addOutput($line)
-{
+    {
         $this->lastOutputTime = microtime(true);
         $this->stdout .= $line;
     }
@@ -686,7 +690,7 @@ class Process
      * @param string $line
      */
     public function addErrorOutput($line)
-{
+    {
         $this->lastOutputTime = microtime(true);
         $this->stderr .= $line;
     }
@@ -697,7 +701,7 @@ class Process
      * @return string
      */
     public function getCommandLine()
-{
+    {
         return $this->commandline;
     }
 
@@ -708,7 +712,7 @@ class Process
      * @return self
      */
     public function setCommandLine($commandline)
-{
+    {
         $this->commandline = $commandline;
 
         return $this;
@@ -720,7 +724,7 @@ class Process
      * @return float|null
      */
     public function getTimeout()
-{
+    {
         return $this->timeout;
     }
 
@@ -730,7 +734,7 @@ class Process
      * @return float|null
      */
     public function getIdleTimeout()
-{
+    {
         return $this->idleTimeout;
     }
 
@@ -741,7 +745,7 @@ class Process
      * @return self
      */
     public function setTimeout($timeout)
-{
+    {
         $this->timeout = $this->validateTimeout($timeout);
 
         return $this;
@@ -754,7 +758,7 @@ class Process
      * @return self
      */
     public function setIdleTimeout($timeout)
-{
+    {
         if (null !== $timeout && $this->outputDisabled) {
             throw new \LogicException('Idle timeout can not be set while the output is disabled.');
         }
@@ -771,7 +775,7 @@ class Process
      * @return self
      */
     public function setTty($tty)
-{
+    {
         if ('\\' === DIRECTORY_SEPARATOR && $tty) {
             throw new \RuntimeException('TTY mode is not supported on Windows platform.');
         }
@@ -790,7 +794,7 @@ class Process
      * @return bool
      */
     public function isTty()
-{
+    {
         return $this->tty;
     }
 
@@ -801,7 +805,7 @@ class Process
      * @return self
      */
     public function setPty($bool)
-{
+    {
         $this->pty = (bool) $bool;
 
         return $this;
@@ -813,7 +817,7 @@ class Process
      * @return bool
      */
     public function isPty()
-{
+    {
         return $this->pty;
     }
 
@@ -823,7 +827,7 @@ class Process
      * @return string|null
      */
     public function getWorkingDirectory()
-{
+    {
         if (null === $this->cwd) {
             return getcwd() ?: null;
         }
@@ -838,7 +842,7 @@ class Process
      * @return self
      */
     public function setWorkingDirectory($cwd)
-{
+    {
         $this->cwd = $cwd;
 
         return $this;
@@ -850,7 +854,7 @@ class Process
      * @return array
      */
     public function getEnv()
-{
+    {
         return $this->env;
     }
 
@@ -861,7 +865,7 @@ class Process
      * @return self
      */
     public function setEnv(array $env)
-{
+    {
         $env = array_filter($env, function ($value) {
             return !is_array($value);
         });
@@ -880,7 +884,7 @@ class Process
      * @return null|string
      */
     public function getInput()
-{
+    {
         return $this->input;
     }
 
@@ -891,7 +895,7 @@ class Process
      * @return self
      */
     public function setInput($input)
-{
+    {
         if ($this->isRunning()) {
             throw new \LogicException('Input can not be set while the process is running.');
         }
@@ -907,7 +911,7 @@ class Process
      * @return array
      */
     public function getOptions()
-{
+    {
         return $this->options;
     }
 
@@ -918,7 +922,7 @@ class Process
      * @return self
      */
     public function setOptions(array $options)
-{
+    {
         $this->options = $options;
 
         return $this;
@@ -930,7 +934,7 @@ class Process
      * @return bool
      */
     public function getEnhanceWindowsCompatibility()
-{
+    {
         return $this->enhanceWindowsCompatibility;
     }
 
@@ -941,7 +945,7 @@ class Process
      * @return self
      */
     public function setEnhanceWindowsCompatibility($enhance)
-{
+    {
         $this->enhanceWindowsCompatibility = (bool) $enhance;
 
         return $this;
@@ -953,7 +957,7 @@ class Process
      * @return bool
      */
     public function getEnhanceSigchildCompatibility()
-{
+    {
         return $this->enhanceSigchildCompatibility;
     }
 
@@ -964,7 +968,7 @@ class Process
      * @return self
      */
     public function setEnhanceSigchildCompatibility($enhance)
-{
+    {
         $this->enhanceSigchildCompatibility = (bool) $enhance;
 
         return $this;
@@ -974,7 +978,7 @@ class Process
      * 是否超时
      */
     public function checkTimeout()
-{
+    {
         if (self::STATUS_STARTED !== $this->status) {
             return;
         }
@@ -998,7 +1002,7 @@ class Process
      * @return bool
      */
     public static function isPtySupported()
-{
+    {
         static $result;
 
         if (null !== $result) {
@@ -1025,7 +1029,7 @@ class Process
      * @return array
      */
     private function getDescriptors()
-{
+    {
         if ('\\' === DIRECTORY_SEPARATOR) {
             $this->processPipes = WindowsPipes::create($this, $this->input);
         } else {
@@ -1050,7 +1054,7 @@ class Process
      * @return callable
      */
     protected function buildCallback($callback)
-{
+    {
         $out      = self::OUT;
         $callback = function ($type, $data) use ($callback, $out) {
             if ($out == $type) {
@@ -1073,7 +1077,7 @@ class Process
      * @param bool $blocking
      */
     protected function updateStatus($blocking)
-{
+    {
         if (self::STATUS_STARTED !== $this->status) {
             return;
         }
@@ -1094,7 +1098,7 @@ class Process
      * @return bool
      */
     protected function isSigchildEnabled()
-{
+    {
         if (null !== self::$sigchild) {
             return self::$sigchild;
         }
@@ -1116,7 +1120,7 @@ class Process
      * @return float|null
      */
     private function validateTimeout($timeout)
-{
+    {
         $timeout = (float) $timeout;
 
         if (0.0 === $timeout) {
@@ -1135,7 +1139,7 @@ class Process
      * @param  bool $close
      */
     private function readPipes($blocking, $close)
-{
+    {
         $result = $this->processPipes->readAndWrite($blocking, $close);
 
         $callback = $this->callback;
@@ -1152,7 +1156,7 @@ class Process
      * 捕获退出码
      */
     private function captureExitCode()
-{
+    {
         if (isset($this->processInformation['exitcode']) && -1 != $this->processInformation['exitcode']) {
             $this->exitcode = $this->processInformation['exitcode'];
         }
@@ -1164,7 +1168,7 @@ class Process
      * @return int 退出码
      */
     private function close()
-{
+    {
         $this->processPipes->close();
         if (is_resource($this->process)) {
             $exitcode = proc_close($this->process);
@@ -1190,7 +1194,7 @@ class Process
      * 重置数据
      */
     private function resetProcessData()
-{
+    {
         $this->starttime                    = null;
         $this->callback                     = null;
         $this->exitcode                     = null;
@@ -1213,7 +1217,7 @@ class Process
      * @return bool
      */
     private function doSignal($signal, $throwException)
-{
+    {
         if (!$this->isRunning()) {
             if ($throwException) {
                 throw new \LogicException('Can not send signal on a non running process.');
@@ -1249,7 +1253,7 @@ class Process
      * @param  string $functionName
      */
     private function requireProcessIsStarted($functionName)
-{
+    {
         if (!$this->isStarted()) {
             throw new \LogicException(sprintf('Process must be started before calling %s.', $functionName));
         }
@@ -1261,7 +1265,7 @@ class Process
      * @param  string $functionName
      */
     private function requireProcessIsTerminated($functionName)
-{
+    {
         if (!$this->isTerminated()) {
             throw new \LogicException(sprintf('Process must be terminated before calling %s.', $functionName));
         }

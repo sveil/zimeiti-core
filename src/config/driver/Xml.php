@@ -12,6 +12,11 @@
 
 namespace sveil\config\driver;
 
+/**
+ * Class Xml
+ * @author Richard <richard@sveil.com>
+ * @package sveil\config\driver
+ */
 class Xml
 {
     protected $config;

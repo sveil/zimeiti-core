@@ -12,6 +12,11 @@
 
 namespace sveil\route;
 
+/**
+ * Class RuleName
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route
+ */
 class RuleName
 {
     protected $item = [];

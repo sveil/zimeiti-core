@@ -12,6 +12,11 @@
 
 namespace sveil\exception;
 
+/**
+ * Class ThrowableError
+ * @author Richard <richard@sveil.com>
+ * @package sveil\exception
+ */
 class ThrowableError extends \ErrorException
 {
     public function __construct(\Throwable $e)

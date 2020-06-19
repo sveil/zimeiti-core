@@ -15,6 +15,11 @@ namespace sveil;
 use sveil\facade\Cookie;
 use sveil\facade\Session;
 
+/**
+ * Class Request
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Request
 {
     /**

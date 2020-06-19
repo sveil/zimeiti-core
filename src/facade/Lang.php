@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Lang
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Lang
  * @mixin \sveil\Lang
  * @method mixed range($range = '') static 设定当前的语言

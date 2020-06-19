@@ -12,9 +12,13 @@
 
 namespace sveil\console\input;
 
+/**
+ * Class Definition
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\input
+ */
 class Definition
 {
-
     /**
      * @var Argument[]
      */

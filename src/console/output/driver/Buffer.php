@@ -14,6 +14,11 @@ namespace sveil\console\output\driver;
 
 use sveil\console\Output;
 
+/**
+ * Class Buffer
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\output\driver
+ */
 class Buffer
 {
     /**
@@ -49,5 +54,4 @@ class Buffer
     {
         // do nothing
     }
-
 }

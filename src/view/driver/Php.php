@@ -16,6 +16,11 @@ use sveil\App;
 use sveil\exception\TemplateNotFoundException;
 use sveil\Loader;
 
+/**
+ * Class Php
+ * @author Richard <richard@sveil.com>
+ * @package sveil\view\driver
+ */
 class Php
 {
     // 模板引擎参数

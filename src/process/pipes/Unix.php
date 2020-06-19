@@ -14,9 +14,13 @@ namespace sveil\process\pipes;
 
 use sveil\Process;
 
+/**
+ * Class Unix
+ * @author Richard <richard@sveil.com>
+ * @package sveil\process\pipes
+ */
 class Unix extends Pipes
 {
-
     /** @var bool */
     private $ttyMode;
     /** @var bool */

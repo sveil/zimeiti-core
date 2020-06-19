@@ -12,9 +12,13 @@
 
 namespace sveil\process\pipes;
 
+/**
+ * Abstract Class Pipes
+ * @author Richard <richard@sveil.com>
+ * @package sveil\process\pipes
+ */
 abstract class Pipes
 {
-
     /** @var array */
     public $pipes = [];
 

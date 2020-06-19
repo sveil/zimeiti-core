@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Request
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Request
  * @mixin \sveil\Request
  * @method void hook(mixed $method, mixed $callback = null) static Hook 方法注入

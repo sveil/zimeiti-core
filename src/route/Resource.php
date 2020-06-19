@@ -14,6 +14,11 @@ namespace sveil\route;
 
 use sveil\Route;
 
+/**
+ * Class Resource
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route
+ */
 class Resource extends RuleGroup
 {
     // 资源路由名称

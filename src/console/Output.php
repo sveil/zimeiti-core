@@ -24,14 +24,12 @@ use sveil\console\output\question\Confirmation;
 
 /**
  * Class Output
+ * @author Richard <richard@sveil.com>
  * @package sveil\console
- *
  * @see     \sveil\console\output\driver\Console::setDecorated
  * @method void setDecorated($decorated)
- *
  * @see     \sveil\console\output\driver\Buffer::fetch
  * @method string fetch()
- *
  * @method void info($message)
  * @method void error($message)
  * @method void comment($message)
@@ -46,10 +44,9 @@ class Output
     const VERBOSITY_VERBOSE      = 2;
     const VERBOSITY_VERY_VERBOSE = 3;
     const VERBOSITY_DEBUG        = 4;
-
-    const OUTPUT_NORMAL = 0;
-    const OUTPUT_RAW    = 1;
-    const OUTPUT_PLAIN  = 2;
+    const OUTPUT_NORMAL          = 0;
+    const OUTPUT_RAW             = 1;
+    const OUTPUT_PLAIN           = 2;
 
     private $verbosity = self::VERBOSITY_NORMAL;
 
@@ -219,5 +216,4 @@ class Output
             throw new Exception('method not exists:' . __CLASS__ . '->' . $method);
         }
     }
-
 }

@@ -26,6 +26,11 @@ use sveil\queue\Job;
 use sveil\queue\Worker;
 use Throwable;
 
+/**
+ * Class Work
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue\command
+ */
 class Work extends Command
 {
     /**

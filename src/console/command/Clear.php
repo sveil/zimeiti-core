@@ -19,6 +19,11 @@ use sveil\console\Output;
 use sveil\facade\App;
 use sveil\facade\Cache;
 
+/**
+ * Class Clear
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command
+ */
 class Clear extends Command
 {
     protected function configure()

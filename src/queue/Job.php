@@ -15,6 +15,11 @@ namespace sveil\queue;
 use DateTime;
 use sveil\facade\Env;
 
+/**
+ * Abstract Class Job
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue
+ */
 abstract class Job
 {
     /**

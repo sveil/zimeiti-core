@@ -14,9 +14,13 @@ namespace sveil\console\output\driver;
 
 use sveil\console\Output;
 
+/**
+ * Class Nothing
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\output\driver
+ */
 class Nothing
 {
-
     public function __construct(Output $output)
     {
         // do nothing

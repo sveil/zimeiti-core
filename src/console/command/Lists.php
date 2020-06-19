@@ -19,6 +19,11 @@ use sveil\console\input\Definition as InputDefinition;
 use sveil\console\input\Option as InputOption;
 use sveil\console\Output;
 
+/**
+ * Class Lists
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command
+ */
 class Lists extends Command
 {
     /**

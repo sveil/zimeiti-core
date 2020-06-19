@@ -15,6 +15,11 @@ namespace sveil\route\dispatch;
 use sveil\Response;
 use sveil\route\Dispatch;
 
+/**
+ * Class View
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route\dispatch
+ */
 class View extends Dispatch
 {
     public function exec()

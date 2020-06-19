@@ -12,6 +12,11 @@
 
 namespace sveil;
 
+/**
+ * Class Hook
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Hook
 {
     /**

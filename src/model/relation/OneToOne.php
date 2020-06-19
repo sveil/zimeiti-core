@@ -20,9 +20,9 @@ use sveil\Model;
 use sveil\model\Relation;
 
 /**
- * Class OneToOne
+ * Abstract Class OneToOne
+ * @author Richard <richard@sveil.com>
  * @package sveil\model\relation
- *
  */
 abstract class OneToOne extends Relation
 {
@@ -332,5 +332,4 @@ abstract class OneToOne extends Relation
 
         return $data;
     }
-
 }

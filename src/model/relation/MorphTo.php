@@ -18,6 +18,11 @@ use sveil\Loader;
 use sveil\Model;
 use sveil\model\Relation;
 
+/**
+ * Class MorphTo
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\relation
+ */
 class MorphTo extends Relation
 {
     // 多态字段
@@ -305,5 +310,4 @@ class MorphTo extends Relation
 
         return $this->parent->setRelation($this->relation, null);
     }
-
 }

@@ -20,6 +20,11 @@ use sveil\route\Resource;
 use sveil\route\RuleGroup;
 use sveil\route\RuleItem;
 
+/**
+ * Class Route
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Route
 {
     /**

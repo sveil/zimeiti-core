@@ -17,6 +17,11 @@ use sveil\console\Input;
 use sveil\console\Output;
 use sveil\Container;
 
+/**
+ * Class Autoload
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command\optimize
+ */
 class Autoload extends Command
 {
     protected function configure()
@@ -276,5 +281,4 @@ EOF;
 
         return $classes;
     }
-
 }

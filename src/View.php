@@ -12,6 +12,11 @@
 
 namespace sveil;
 
+/**
+ * Class View
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class View
 {
     /**

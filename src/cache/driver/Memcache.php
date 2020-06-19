@@ -14,6 +14,11 @@ namespace sveil\cache\driver;
 
 use sveil\cache\Driver;
 
+/**
+ * Class Memcache
+ * @author Richard <richard@sveil.com>
+ * @package sveil\cache\driver
+ */
 class Memcache extends Driver
 {
     protected $options = [
@@ -203,5 +208,4 @@ class Memcache extends Driver
 
         return $this->handler->flush();
     }
-
 }

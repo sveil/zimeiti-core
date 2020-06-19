@@ -18,6 +18,11 @@ use sveil\exception\ValidateException;
 use sveil\Request;
 use sveil\Response;
 
+/**
+ * Abstract Class Dispatch
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route
+ */
 abstract class Dispatch
 {
     /**

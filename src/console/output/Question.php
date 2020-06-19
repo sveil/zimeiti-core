@@ -12,9 +12,13 @@
 
 namespace sveil\console\output;
 
+/**
+ * Class Question
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\output
+ */
 class Question
 {
-
     private $question;
     private $attempts;
     private $hidden         = false;

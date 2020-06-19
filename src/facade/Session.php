@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Session
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Session
  * @mixin \sveil\Session
  * @method void init(array $config = []) static session初始化

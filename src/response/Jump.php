@@ -14,6 +14,11 @@ namespace sveil\response;
 
 use sveil\Response;
 
+/**
+ * Class Jump
+ * @author Richard <richard@sveil.com>
+ * @package sveil\response
+ */
 class Jump extends Response
 {
     protected $contentType = 'text/html';

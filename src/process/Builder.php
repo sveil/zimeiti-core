@@ -14,6 +14,11 @@ namespace sveil\process;
 
 use sveil\Process;
 
+/**
+ * Class Builder
+ * @author Richard <richard@sveil.com>
+ * @package sveil\process
+ */
 class Builder
 {
     private $arguments;

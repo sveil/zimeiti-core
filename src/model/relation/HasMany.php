@@ -18,6 +18,11 @@ use sveil\Loader;
 use sveil\Model;
 use sveil\model\Relation;
 
+/**
+ * Class HasMany
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\relation
+ */
 class HasMany extends Relation
 {
     /**
@@ -357,5 +362,4 @@ class HasMany extends Relation
             $this->baseQuery = true;
         }
     }
-
 }

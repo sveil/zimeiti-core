@@ -16,6 +16,9 @@ use DateTime;
 
 /**
  * 自动时间戳
+ * Trait TimeStamp
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\concern
  */
 trait TimeStamp
 {

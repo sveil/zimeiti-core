@@ -19,6 +19,11 @@ use sveil\console\Output;
 use sveil\facade\App;
 use sveil\facade\Build as AppBuild;
 
+/**
+ * Class Build
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command
+ */
 class Build extends Command
 {
     /**

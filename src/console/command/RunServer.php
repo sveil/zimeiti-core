@@ -18,6 +18,11 @@ use sveil\console\input\Option;
 use sveil\console\Output;
 use sveil\facade\App;
 
+/**
+ * Class RunServer
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command
+ */
 class RunServer extends Command
 {
     public function configure()
@@ -51,5 +56,4 @@ class RunServer extends Command
         $output->writeln(sprintf('Document root is: %s', $root));
         passthru($command);
     }
-
 }

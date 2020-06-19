@@ -18,6 +18,9 @@ use sveil\Response;
 
 /**
  * 页面Trace调试
+ * Class Html
+ * @author Richard <richard@sveil.com>
+ * @package sveil\debug
  */
 class Html
 {
@@ -103,5 +106,4 @@ class Html
         include $this->config['file'];
         return ob_get_clean();
     }
-
 }

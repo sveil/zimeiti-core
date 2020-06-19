@@ -16,7 +16,9 @@ use sveil\cache\Driver;
 
 /**
  * Wincache缓存驱动
- * @author    liu21st <liu21st@gmail.com>
+ * Class Wincache
+ * @author Richard <richard@sveil.com>
+ * @package sveil\cache\driver
  */
 class Wincache extends Driver
 {
@@ -172,5 +174,4 @@ class Wincache extends Driver
         $this->writeTimes++;
         return wincache_ucache_clear();
     }
-
 }

@@ -12,12 +12,15 @@
 
 namespace sveil\exception;
 
+/**
+ * Class RouteNotFoundException
+ * @author Richard <richard@sveil.com>
+ * @package sveil\exception
+ */
 class RouteNotFoundException extends HttpException
 {
-
     public function __construct()
     {
         parent::__construct(404, 'Route Not Found');
     }
-
 }

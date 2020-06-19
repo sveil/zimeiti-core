@@ -20,6 +20,11 @@ use sveil\Route;
 use sveil\route\dispatch\Response as ResponseDispatch;
 use sveil\route\dispatch\Url as UrlDispatch;
 
+/**
+ * Class RuleGroup
+ * @author Richard <richard@sveil.com>
+ * @package sveil\route
+ */
 class RuleGroup extends Rule
 {
     // 分组路由（包括子分组）

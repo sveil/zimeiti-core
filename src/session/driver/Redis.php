@@ -15,6 +15,11 @@ namespace sveil\session\driver;
 use SessionHandlerInterface;
 use sveil\Exception;
 
+/**
+ * Class Redis
+ * @author Richard <richard@sveil.com>
+ * @package sveil\session\driver
+ */
 class Redis implements SessionHandlerInterface
 {
     /** @var \Redis */

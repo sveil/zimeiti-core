@@ -17,6 +17,11 @@ use sveil\console\Input;
 use sveil\console\Output;
 use sveil\facade\App;
 
+/**
+ * Class Version
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command
+ */
 class Version extends Command
 {
     protected function configure()

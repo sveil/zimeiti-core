@@ -15,6 +15,11 @@ namespace sveil\queue\job;
 use sveil\queue\connector\Database as DbQueue;
 use sveil\queue\Job;
 
+/**
+ * Class Database
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue\job
+ */
 class Database extends Job
 {
     /**

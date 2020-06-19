@@ -28,6 +28,9 @@ use sveil\model\relation\MorphTo;
 
 /**
  * 模型关联处理
+ * Trait RelationShip
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\concern
  */
 trait RelationShip
 {

@@ -12,6 +12,11 @@
 
 namespace sveil;
 
+/**
+ * Class Env
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Env
 {
     /**

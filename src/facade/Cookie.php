@@ -15,6 +15,9 @@ namespace sveil\facade;
 use sveil\Facade;
 
 /**
+ * Class Cookie
+ * @author Richard <richard@sveil.com>
+ * @package sveil\facade
  * @see \sveil\Cookie
  * @mixin \sveil\Cookie
  * @method void init(array $config = []) static 初始化

@@ -18,6 +18,9 @@ use sveil\Response;
 use sveil\response\Redirect;
 
 /**
+ * Trait Jump
+ * @author Richard <richard@sveil.com>
+ * @package sveil\controller
  * 用法：
  * class index
  * {

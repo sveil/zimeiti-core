@@ -19,6 +19,11 @@ use sveil\Loader;
 use sveil\Model;
 use sveil\model\Relation;
 
+/**
+ * Class MorphMany
+ * @author Richard <richard@sveil.com>
+ * @package sveil\model\relation
+ */
 class MorphMany extends Relation
 {
     // 多态字段
@@ -339,5 +344,4 @@ class MorphMany extends Relation
             $this->baseQuery = true;
         }
     }
-
 }

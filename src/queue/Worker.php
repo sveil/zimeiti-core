@@ -16,6 +16,11 @@ use Exception;
 use sveil\facade\Hook;
 use sveil\Queue;
 
+/**
+ * Class Worker
+ * @author Richard <richard@sveil.com>
+ * @package sveil\queue
+ */
 class Worker
 {
     /**

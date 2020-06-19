@@ -15,6 +15,9 @@ namespace sveil\exception;
 /**
  * PDO异常处理类
  * 重新封装了系统的\PDOException类
+ * Class PDOException
+ * @author Richard <richard@sveil.com>
+ * @package sveil\exception
  */
 class PDOException extends DbException
 {

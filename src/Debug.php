@@ -15,6 +15,11 @@ namespace sveil;
 use sveil\model\Collection as ModelCollection;
 use sveil\response\Redirect;
 
+/**
+ * Class Debug
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Debug
 {
     /**

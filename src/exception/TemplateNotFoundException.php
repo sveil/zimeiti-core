@@ -12,6 +12,11 @@
 
 namespace sveil\exception;
 
+/**
+ * Class TemplateNotFoundException
+ * @author Richard <richard@sveil.com>
+ * @package sveil\exception
+ */
 class TemplateNotFoundException extends \RuntimeException
 {
     protected $template;

@@ -15,9 +15,13 @@ namespace sveil;
 use sveil\exception\ClassNotFoundException;
 use sveil\validate\ValidateRule;
 
+/**
+ * Class Validate
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Validate
 {
-
     /**
      * 自定义验证类型
      * @var array

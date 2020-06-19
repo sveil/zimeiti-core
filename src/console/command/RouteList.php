@@ -20,6 +20,11 @@ use sveil\console\Output;
 use sveil\console\Table;
 use sveil\Container;
 
+/**
+ * Class RouteList
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\command
+ */
 class RouteList extends Command
 {
     protected $sortBy = [

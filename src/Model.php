@@ -16,7 +16,8 @@ use InvalidArgumentException;
 use sveil\db\Query;
 
 /**
- * Class Model
+ * Abstract Class Model
+ * @author Richard <richard@sveil.com>
  * @package sveil
  * @mixin Query
  * @method Query where(mixed $field, string $op = null, mixed $condition = null) static 查询条件

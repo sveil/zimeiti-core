@@ -18,6 +18,9 @@ use sveil\route\Dispatch;
 
 /**
  * App 应用管理
+ * Class App
+ * @author Richard <richard@sveil.com>
+ * @package sveil
  */
 class App extends Container
 {
@@ -979,5 +982,4 @@ class App extends Container
     {
         return $this->beginMem;
     }
-
 }

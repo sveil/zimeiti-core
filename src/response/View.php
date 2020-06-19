@@ -14,6 +14,11 @@ namespace sveil\response;
 
 use sveil\Response;
 
+/**
+ * Class View
+ * @author Richard <richard@sveil.com>
+ * @package sveil\response
+ */
 class View extends Response
 {
     // 输出参数
@@ -116,5 +121,4 @@ class View extends Response
     {
         return $this->app['view']->exists($name);
     }
-
 }

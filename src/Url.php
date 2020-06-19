@@ -12,6 +12,11 @@
 
 namespace sveil;
 
+/**
+ * Class Url
+ * @author Richard <richard@sveil.com>
+ * @package sveil
+ */
 class Url
 {
     /**

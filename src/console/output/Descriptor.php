@@ -20,9 +20,13 @@ use sveil\console\input\Option as InputOption;
 use sveil\console\Output;
 use sveil\console\output\descriptor\Console as ConsoleDescription;
 
+/**
+ * Class Descriptor
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\output
+ */
 class Descriptor
 {
-
     /**
      * @var Output
      */

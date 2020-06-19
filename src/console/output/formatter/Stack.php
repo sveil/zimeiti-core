@@ -12,9 +12,13 @@
 
 namespace sveil\console\output\formatter;
 
+/**
+ * Class Stack
+ * @author Richard <richard@sveil.com>
+ * @package sveil\console\output\formatter
+ */
 class Stack
 {
-
     /**
      * @var Style[]
      */
